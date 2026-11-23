@@ -1,0 +1,66 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/placeholders';
+
+.modal {
+  width: 520px;
+  max-width: calc(100% - 2 * $page-side-padding);
+  margin: auto;
+  padding: 0;
+  background: $color-white;
+  border: none;
+
+  &::backdrop {
+    background: $color-overlay-heavy;
+  }
+}
+
+.login {
+  display: grid;
+  gap: $space-xl;
+  padding: $space-3xl $space-3xl $space-2xl;
+}
+
+.login__label {
+  font-size: $font-size-s;
+}
+
+.login__input {
+  height: 40px;
+}
+
+.login__password {
+  position: relative;
+  display: block;
+
+  .login__input {
+    padding-right: $space-2xl;
+  }
+}
+
+.login__toggle {
+  @extend %reset-button;
+
+  position: absolute;
+  top: 50%;
+  right: $space-xs;
+  width: $space-m;
+  transform: translate(0, -50%);
+}
+
+.login__options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login__remember {
+  font-size: $font-size-2xs;
+}
+
+.login__forgot {
+  font-size: $font-size-2xs;
+}
+
+.login__submit {
+  width: 100%;
+}

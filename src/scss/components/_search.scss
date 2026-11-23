@@ -1,0 +1,26 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/placeholders';
+
+.search {
+  position: relative;
+}
+
+.search__input {
+  padding: $space-xs $space-2xl $space-xs $space-s;
+  font-size: $font-size-m;
+}
+
+.search__button {
+  @extend %reset-button;
+  @extend %flex-center;
+
+  position: absolute;
+  top: 50%;
+  right: $space-s;
+  transform: translate(0, -50%);
+}
+
+.search__icon {
+  @include square(16px);
+}

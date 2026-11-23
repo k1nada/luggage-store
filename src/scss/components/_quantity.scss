@@ -1,0 +1,48 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/placeholders';
+
+.quantity {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-l;
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-bold;
+}
+
+.quantity__button {
+  @extend %reset-button;
+
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+}
+
+.quantity__value {
+  padding: 0;
+  font: inherit;
+  text-align: center;
+  border: none;
+  appearance: textfield;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    appearance: none;
+  }
+}
+
+.quantity--bordered {
+  justify-content: space-between;
+  flex-shrink: 0;
+  gap: 0;
+  width: 130px;
+  height: $space-3xl;
+  padding: 0 $space-s;
+  border: $border-width-thick solid $color-primary;
+
+  .quantity__button {
+    font-size: $font-size-2xl;
+  }
+
+  .quantity__value {
+    width: 28px;
+  }
+}

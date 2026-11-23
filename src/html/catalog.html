@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../dist/main.css" />
+    <title>Catalog</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__top container">
+        <ul class="header__socials">
+          <li>
+            <a href="https://facebook.com" class="header__social">
+              <img src="../assets/icons/social/facebook.svg" alt="" class="header__social-icon" />
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com" class="header__social">
+              <img src="../assets/icons/social/twitter.svg" alt="" class="header__social-icon" />
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com" class="header__social">
+              <img src="../assets/icons/social/instagram.svg" alt="" class="header__social-icon" />
+            </a>
+          </li>
+        </ul>
+
+        <a href="../index.html" class="header__logo">
+          <span class="header__logo-icon">
+            <img src="../assets/icons/logo/bg.svg" alt="" class="header__logo-bg" />
+            <img src="../assets/icons/logo/logo-luggage.svg" alt="" class="header__logo-luggage" />
+          </span>
+          <img src="../assets/icons/logo/best-shop.svg" alt="" class="header__logo-text" />
+        </a>
+
+        <div class="header__actions">
+          <button type="button" class="header__action">
+            <img src="../assets/icons/ui/user.svg" alt="" class="header__action-icon" />
+          </button>
+          <a href="cart.html" class="header__action header__cart-link">
+            <img src="../assets/icons/ui/shopping-cart.svg" alt="" class="header__action-icon" />
+            <span class="header__cart-count" hidden>0</span>
+          </a>
+        </div>
+      </div>
+
+      <nav class="header__nav container">
+        <ul class="header__menu">
+          <li>
+            <a href="../index.html" class="link header__menu-link">Home</a>
+          </li>
+          <li>
+            <a href="catalog.html" class="link header__menu-link header__menu-link--active"
+              >Catalog</a
+            >
+          </li>
+          <li>
+            <a href="about.html" class="link header__menu-link">About Us</a>
+          </li>
+          <li>
+            <a href="contact.html" class="link header__menu-link">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1 class="visually-hidden">Catalog</h1>
+      <form class="filters container">
+        <div class="filters__row">
+          <div class="form__field filters__item">
+            <span class="form__label filters__label">Size</span>
+            <button type="button" class="select select--bold filters__toggle">Choose option</button>
+          </div>
+          <div class="form__field filters__item">
+            <span class="form__label filters__label">Color</span>
+            <button type="button" class="select select--bold filters__toggle">Choose option</button>
+          </div>
+          <div class="form__field filters__item">
+            <span class="form__label filters__label">Category</span>
+            <button type="button" class="select select--bold filters__toggle">Choose option</button>
+          </div>
+          <label class="form__field filters__item">
+            <span class="form__label filters__label">Sales</span>
+            <input type="checkbox" name="salesStatus" class="filters__sales" />
+          </label>
+        </div>
+        <div class="filters__actions">
+          <button type="reset" class="button button--primary button--uppercase filters__button">
+            Clear Filters
+          </button>
+          <button type="button" class="button button--primary button--uppercase filters__button">
+            Hide Filters
+          </button>
+        </div>
+      </form>
+
+      <section class="catalog container">
+        <div class="catalog__content">
+          <div class="catalog__toolbar">
+            <p class="catalog__results">Showing 1-12 Of 15 Results</p>
+            <div class="catalog__sort">
+              <select class="select catalog__sort-select" name="sort">
+                <option value="default">Default Sorting</option>
+              </select>
+            </div>
+          </div>
+          <ul class="catalog__list">
+            <li>
+              <article class="product-card">
+                <a href="product.html" class="product-card__image-wrap">
+                  <span class="product-card__badge">Sale</span>
+                  <img
+                    src="../assets/images/catalog/suitcase-green.png"
+                    alt="green suitcase"
+                    class="product-card__image"
+                  />
+                </a>
+                <h2 class="product-card__title">Vel vestibulum elit tuvel euqen.</h2>
+                <p class="product-card__price">$250</p>
+                <button
+                  type="button"
+                  class="button button--primary button--small product-card__button"
+                >
+                  Add To Cart
+                </button>
+              </article>
+            </li>
+            <li>
+              <article class="product-card">
+                <a href="product.html" class="product-card__image-wrap">
+                  <span class="product-card__badge">Sale</span>
+                  <img
+                    src="../assets/images/catalog/suitcase-blue.png"
+                    alt="blue suitcase"
+                    class="product-card__image"
+                  />
+                </a>
+                <h2 class="product-card__title">Vel vestibulum elit tuvel euqen.</h2>
+                <p class="product-card__price">$250</p>
+                <button
+                  type="button"
+                  class="button button--primary button--small product-card__button"
+                >
+                  Add To Cart
+                </button>
+              </article>
+            </li>
+            <li>
+              <article class="product-card">
+                <a href="product.html" class="product-card__image-wrap">
+                  <span class="product-card__badge">Sale</span>
+                  <img
+                    src="../assets/images/catalog/suitcase-grey.png"
+                    alt="grey suitcase"
+                    class="product-card__image"
+                  />
+                </a>
+                <h2 class="product-card__title">Vel vestibulum elit tuvel euqen.</h2>
+                <p class="product-card__price">$250</p>
+                <button
+                  type="button"
+                  class="button button--primary button--small product-card__button"
+                >
+                  Add To Cart
+                </button>
+              </article>
+            </li>
+            <li>
+              <article class="product-card">
+                <a href="product.html" class="product-card__image-wrap">
+                  <span class="product-card__badge">Sale</span>
+                  <img
+                    src="../assets/images/catalog/suitcase-orange.png"
+                    alt="orange suitcase"
+                    class="product-card__image"
+                  />
+                </a>
+                <h2 class="product-card__title">Vel vestibulum elit tuvel euqen.</h2>
+                <p class="product-card__price">$250</p>
+                <button
+                  type="button"
+                  class="button button--primary button--small product-card__button"
+                >
+                  Add To Cart
+                </button>
+              </article>
+            </li>
+            <li>
+              <article class="product-card">
+                <a href="product.html" class="product-card__image-wrap">
+                  <span class="product-card__badge">Sale</span>
+                  <img
+                    src="../assets/images/catalog/suitcase-yellow.png"
+                    alt="yellow suitcase"
+                    class="product-card__image"
+                  />
+                </a>
+                <h2 class="product-card__title">Vel vestibulum elit tuvel euqen.</h2>
+                <p class="product-card__price">$250</p>
+                <button
+                  type="button"
+                  class="button button--primary button--small product-card__button"
+                >
+                  Add To Cart
+                </button>
+              </article>
+            </li>
+            <li>
+              <article class="product-card">
+                <a href="product.html" class="product-card__image-wrap">
+                  <span class="product-card__badge">Sale</span>
+                  <img
+                    src="../assets/images/catalog/suitcase-red.png"
+                    alt="red suitcase"
+                    class="product-card__image"
+                  />
+                </a>
+                <h2 class="product-card__title">Vel vestibulum elit tuvel euqen.</h2>
+                <p class="product-card__price">$250</p>
+                <button
+                  type="button"
+                  class="button button--primary button--small product-card__button"
+                >
+                  Add To Cart
+                </button>
+              </article>
+            </li>
+            <li>
+              <article class="product-card">
+                <a href="product.html" class="product-card__image-wrap">
+                  <span class="product-card__badge">Sale</span>
+                  <img
+                    src="../assets/images/catalog/suitcase-black.png"
+                    alt="black suitcase"
+                    class="product-card__image"
+                  />
+                </a>
+                <h2 class="product-card__title">Vel vestibulum elit tuvel euqen.</h2>
+                <p class="product-card__price">$250</p>
+                <button
+                  type="button"
+                  class="button button--primary button--small product-card__button"
+                >
+                  Add To Cart
+                </button>
+              </article>
+            </li>
+            <li>
+              <article class="product-card">
+                <a href="product.html" class="product-card__image-wrap">
+                  <span class="product-card__badge">Sale</span>
+                  <img
+                    src="../assets/images/catalog/suitcase-brown.png"
+                    alt="brown suitcase"
+                    class="product-card__image"
+                  />
+                </a>
+                <h2 class="product-card__title">Vel vestibulum elit tuvel euqen.</h2>
+                <p class="product-card__price">$250</p>
+                <button
+                  type="button"
+                  class="button button--primary button--small product-card__button"
+                >
+                  Add To Cart
+                </button>
+              </article>
+            </li>
+            <li>
+              <article class="product-card">
+                <a href="product.html" class="product-card__image-wrap">
+                  <span class="product-card__badge">Sale</span>
+                  <img
+                    src="../assets/images/catalog/kid-suitcase-1.png"
+                    alt="kid suitcase"
+                    class="product-card__image"
+                  />
+                </a>
+                <h2 class="product-card__title">Vel vestibulum elit tuvel euqen.</h2>
+                <p class="product-card__price">$250</p>
+                <button
+                  type="button"
+                  class="button button--primary button--small product-card__button"
+                >
+                  Add To Cart
+                </button>
+              </article>
+            </li>
+            <li>
+              <article class="product-card">
+                <a href="product.html" class="product-card__image-wrap">
+                  <span class="product-card__badge">Sale</span>
+                  <img
+                    src="../assets/images/catalog/kid-suitcase-2.png"
+                    alt="kid suitcase"
+                    class="product-card__image"
+                  />
+                </a>
+                <h2 class="product-card__title">Vel vestibulum elit tuvel euqen.</h2>
+                <p class="product-card__price">$250</p>
+                <button
+                  type="button"
+                  class="button button--primary button--small product-card__button"
+                >
+                  Add To Cart
+                </button>
+              </article>
+            </li>
+            <li>
+              <article class="product-card">
+                <a href="product.html" class="product-card__image-wrap">
+                  <span class="product-card__badge">Sale</span>
+                  <img
+                    src="../assets/images/catalog/kid-suitcase-3.png"
+                    alt="kid suitcase"
+                    class="product-card__image"
+                  />
+                </a>
+                <h2 class="product-card__title">Vel vestibulum elit tuvel euqen.</h2>
+                <p class="product-card__price">$250</p>
+                <button
+                  type="button"
+                  class="button button--primary button--small product-card__button"
+                >
+                  Add To Cart
+                </button>
+              </article>
+            </li>
+            <li>
+              <article class="product-card">
+                <a href="product.html" class="product-card__image-wrap">
+                  <span class="product-card__badge">Sale</span>
+                  <img
+                    src="../assets/images/catalog/kid-suitcase-4.png"
+                    alt="kid suitcase"
+                    class="product-card__image"
+                  />
+                </a>
+                <h2 class="product-card__title">Vel vestibulum elit tuvel euqen.</h2>
+                <p class="product-card__price">$250</p>
+                <button
+                  type="button"
+                  class="button button--primary button--small product-card__button"
+                >
+                  Add To Cart
+                </button>
+              </article>
+            </li>
+          </ul>
+          <nav class="pagination">
+            <ul class="pagination__list">
+              <li>
+                <a href="#" class="pagination__link pagination__link--active">1</a>
+              </li>
+              <li><a href="#" class="pagination__link">2</a></li>
+            </ul>
+            <a href="#" class="pagination__next">Next</a>
+          </nav>
+        </div>
+
+        <aside class="catalog__sidebar">
+          <form class="search">
+            <input
+              type="search"
+              name="search"
+              placeholder="Search Models"
+              class="input search__input"
+            />
+            <button type="submit" class="search__button">
+              <img src="../assets/icons/ui/search.svg" alt="" class="search__icon" />
+            </button>
+          </form>
+          <h2 class="catalog__sidebar-title">Top Best Sets</h2>
+          <ul class="best-sets">
+            <li class="best-set">
+              <img
+                src="../assets/images/best-sets/set-red.png"
+                alt="red suitcase set"
+                class="best-set__image"
+              />
+              <div class="best-set__content">
+                <h3 class="best-set__title">
+                  <a href="product.html">Primis in faucibus aenean laoreet rhoncus ipsum eget.</a>
+                </h3>
+                <p class="rating rating--small">
+                  <img src="../assets/icons/ui/star.svg" alt="" class="rating__star" /><img
+                    src="../assets/icons/ui/star.svg"
+                    alt=""
+                    class="rating__star"
+                  /><img src="../assets/icons/ui/star.svg" alt="" class="rating__star" /><img
+                    src="../assets/icons/ui/star.svg"
+                    alt=""
+                    class="rating__star"
+                  /><img src="../assets/icons/ui/star.svg" alt="" class="rating__star" />
+                </p>
+                <p class="best-set__price">$1000</p>
+              </div>
+            </li>
+            <li class="best-set">
+              <img
+                src="../assets/images/best-sets/set-black.png"
+                alt="black suitcase set"
+                class="best-set__image"
+              />
+              <div class="best-set__content">
+                <h3 class="best-set__title">
+                  <a href="product.html"
+                    >Vestibulum in elementum erat Interdum et malesuada fames.</a
+                  >
+                </h3>
+                <p class="rating rating--small">
+                  <img src="../assets/icons/ui/star.svg" alt="" class="rating__star" /><img
+                    src="../assets/icons/ui/star.svg"
+                    alt=""
+                    class="rating__star"
+                  /><img src="../assets/icons/ui/star.svg" alt="" class="rating__star" /><img
+                    src="../assets/icons/ui/star.svg"
+                    alt=""
+                    class="rating__star"
+                  /><img src="../assets/icons/ui/star.svg" alt="" class="rating__star" />
+                </p>
+                <p class="best-set__price">$1200</p>
+              </div>
+            </li>
+            <li class="best-set">
+              <img
+                src="../assets/images/best-sets/set-blue.png"
+                alt="blue suitcase set"
+                class="best-set__image"
+              />
+              <div class="best-set__content">
+                <h3 class="best-set__title">
+                  <a href="product.html">Laoreet rhoncus ipsum eget tempus raesent convallis.</a>
+                </h3>
+                <p class="rating rating--small">
+                  <img src="../assets/icons/ui/star.svg" alt="" class="rating__star" /><img
+                    src="../assets/icons/ui/star.svg"
+                    alt=""
+                    class="rating__star"
+                  /><img src="../assets/icons/ui/star.svg" alt="" class="rating__star" /><img
+                    src="../assets/icons/ui/star.svg"
+                    alt=""
+                    class="rating__star"
+                  /><img src="../assets/icons/ui/grey-star.svg" alt="" class="rating__star" />
+                </p>
+                <p class="best-set__price">$2100</p>
+              </div>
+            </li>
+            <li class="best-set">
+              <img
+                src="../assets/images/best-sets/set-yellow.png"
+                alt="yellow suitcase set"
+                class="best-set__image"
+              />
+              <div class="best-set__content">
+                <h3 class="best-set__title">
+                  <a href="product.html"
+                    >Interdum et malesuada fames ante ipsum primis in faucibus.</a
+                  >
+                </h3>
+                <p class="rating rating--small">
+                  <img src="../assets/icons/ui/star.svg" alt="" class="rating__star" /><img
+                    src="../assets/icons/ui/star.svg"
+                    alt=""
+                    class="rating__star"
+                  /><img src="../assets/icons/ui/star.svg" alt="" class="rating__star" /><img
+                    src="../assets/icons/ui/star.svg"
+                    alt=""
+                    class="rating__star"
+                  /><img src="../assets/icons/ui/grey-star.svg" alt="" class="rating__star" />
+                </p>
+                <p class="best-set__price">$1500</p>
+              </div>
+            </li>
+            <li class="best-set">
+              <img
+                src="../assets/images/best-sets/set-green.png"
+                alt="green suitcase set"
+                class="best-set__image"
+              />
+              <div class="best-set__content">
+                <h3 class="best-set__title">
+                  <a href="product.html">Rhoncus ipsum eget tempus Praesent convallis fermentum.</a>
+                </h3>
+                <p class="rating rating--small">
+                  <img src="../assets/icons/ui/star.svg" alt="" class="rating__star" /><img
+                    src="../assets/icons/ui/star.svg"
+                    alt=""
+                    class="rating__star"
+                  /><img src="../assets/icons/ui/star.svg" alt="" class="rating__star" /><img
+                    src="../assets/icons/ui/star.svg"
+                    alt=""
+                    class="rating__star"
+                  /><img src="../assets/icons/ui/grey-star.svg" alt="" class="rating__star" />
+                </p>
+                <p class="best-set__price">$1100</p>
+              </div>
+            </li>
+          </ul>
+        </aside>
+      </section>
+    </main>
+    <footer class="footer">
+      <section class="benefits">
+        <div class="benefits__inner container">
+          <h2 class="benefits__title">Our Benefits</h2>
+          <ul class="benefits__list">
+            <li class="benefits__item">
+              <img src="../assets/icons/benefits/travel.svg" alt="" class="benefits__icon" />
+              <p class="benefits__text">Velit nisl sodales eget donec quis. volutpat orci.</p>
+            </li>
+            <li class="benefits__item">
+              <img src="../assets/icons/benefits/truck.svg" alt="" class="benefits__icon" />
+              <p class="benefits__text">Dolor eu varius. Morbi fermentum velit nisl.</p>
+            </li>
+            <li class="benefits__item">
+              <img src="../assets/icons/benefits/payment.svg" alt="" class="benefits__icon" />
+              <p class="benefits__text">Malesuada fames ac ante ipsum primis in faucibus.</p>
+            </li>
+            <li class="benefits__item">
+              <img src="../assets/icons/benefits/education.svg" alt="" class="benefits__icon" />
+              <p class="benefits__text">Nisl sodales eget donec quis. volutpat orci.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="footer__main container">
+        <div class="footer__columns">
+          <nav class="footer__column">
+            <h3 class="footer__title">
+              <a href="about.html" class="link">About Us</a>
+            </h3>
+            <ul class="footer__links">
+              <li><a href="#" class="link">Organisation</a></li>
+              <li><a href="#" class="link">Partners</a></li>
+              <li><a href="#" class="link">Clients</a></li>
+            </ul>
+          </nav>
+          <nav class="footer__column">
+            <h3 class="footer__title">Interesting Links</h3>
+            <ul class="footer__links">
+              <li><a href="#" class="link">Photo Gallery</a></li>
+              <li><a href="#" class="link">Our Team</a></li>
+              <li><a href="#" class="link">Socials</a></li>
+            </ul>
+          </nav>
+          <nav class="footer__column">
+            <h3 class="footer__title">Achievements</h3>
+            <ul class="footer__links">
+              <li><a href="#" class="link">Winning Awards</a></li>
+              <li><a href="#" class="link">Press</a></li>
+              <li><a href="#" class="link">Our Amazing Clients</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__shipping">
+          <h3 class="footer__title">Shipping Information</h3>
+          <p class="footer__text">
+            Nulla eleifend pulvinar purus, molestie euismod odio imperdiet ac. Ut sit amet erat nec
+            nibh rhoncus varius in non lorem. Donec interdum, lectus in convallis pulvinar, enim
+            elit porta sapien, vel finibus erat felis sed neque. Etiam aliquet neque sagittis erat
+            tincidunt aliquam.
+          </p>
+        </div>
+
+        <div class="footer__contact-text">
+          <h3 class="footer__title">
+            <a href="contact.html" class="link">Contact Us</a>
+          </h3>
+          <p class="footer__text">
+            Bendum dolor eu varius. Morbi fermentum velitsodales egetonec. volutpat orci. Sed ipsum
+            felis, tristique egestas et, convallis ac velitn consequat nec luctus.
+          </p>
+        </div>
+
+        <address class="footer__contacts">
+          <ul class="footer__contacts-list">
+            <li class="footer__contact">
+              <img src="../assets/icons/contacts/phone.svg" alt="" class="footer__contact-icon" />
+              <span>Phone: <a href="tel:+632366322">(+63) 236 6322</a></span>
+            </li>
+            <li class="footer__contact">
+              <img src="../assets/icons/contacts/mail.svg" alt="" class="footer__contact-icon" />
+              <span><a href="mailto:public@news.com">public@news.com</a></span>
+            </li>
+            <li class="footer__contact">
+              <img src="../assets/icons/contacts/clock.svg" alt="" class="footer__contact-icon" />
+              <span>Mon - Fri: 10am - 6pm<br />Sat - Sun: 10am - 6pm</span>
+            </li>
+            <li class="footer__contact">
+              <img
+                src="../assets/icons/contacts/location.svg"
+                alt=""
+                class="footer__contact-icon"
+              />
+              <span>639 Jade Valley,<br />Washington Dc</span>
+            </li>
+          </ul>
+        </address>
+      </div>
+
+      <p class="footer__copyright">&copy; Copyright 2025</p>
+    </footer>
+
+    <dialog class="modal">
+      <form method="dialog" class="login">
+        <label class="form__field">
+          <span class="login__label">Email address <span class="form__required">*</span></span>
+          <input type="email" name="email" class="input input--accent login__input" required />
+        </label>
+        <label class="form__field">
+          <span class="login__label">Password <span class="form__required">*</span></span>
+          <span class="login__password">
+            <input
+              type="password"
+              name="password"
+              class="input input--accent login__input"
+              required
+            />
+            <button type="button" class="login__toggle">
+              <img src="../assets/icons/ui/eye.svg" alt="" />
+            </button>
+          </span>
+        </label>
+        <div class="login__options">
+          <label class="checkbox login__remember">
+            <input type="checkbox" name="remember" class="checkbox__input" />
+            Remember me
+          </label>
+          <a href="#" class="link link--accent login__forgot">Forgot Your Password?</a>
+        </div>
+        <button type="submit" class="button button--primary button--compact login__submit">
+          Log In
+        </button>
+      </form>
+    </dialog>
+  </body>
+</html>

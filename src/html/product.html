@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../dist/main.css" />
+    <title>Product</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__top container">
+        <ul class="header__socials">
+          <li>
+            <a href="https://facebook.com" class="header__social">
+              <img src="../assets/icons/social/facebook.svg" alt="" class="header__social-icon" />
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com" class="header__social">
+              <img src="../assets/icons/social/twitter.svg" alt="" class="header__social-icon" />
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com" class="header__social">
+              <img src="../assets/icons/social/instagram.svg" alt="" class="header__social-icon" />
+            </a>
+          </li>
+        </ul>
+
+        <a href="../index.html" class="header__logo">
+          <span class="header__logo-icon">
+            <img src="../assets/icons/logo/bg.svg" alt="" class="header__logo-bg" />
+            <img src="../assets/icons/logo/logo-luggage.svg" alt="" class="header__logo-luggage" />
+          </span>
+          <img src="../assets/icons/logo/best-shop.svg" alt="" class="header__logo-text" />
+        </a>
+
+        <div class="header__actions">
+          <button type="button" class="header__action">
+            <img src="../assets/icons/ui/user.svg" alt="" class="header__action-icon" />
+          </button>
+          <a href="cart.html" class="header__action header__cart-link">
+            <img src="../assets/icons/ui/shopping-cart.svg" alt="" class="header__action-icon" />
+            <span class="header__cart-count" hidden>0</span>
+          </a>
+        </div>
+      </div>
+
+      <nav class="header__nav container">
+        <ul class="header__menu">
+          <li>
+            <a href="../index.html" class="link header__menu-link">Home</a>
+          </li>
+          <li>
+            <a href="catalog.html" class="link header__menu-link">Catalog</a>
+          </li>
+          <li>
+            <a href="about.html" class="link header__menu-link">About Us</a>
+          </li>
+          <li>
+            <a href="contact.html" class="link header__menu-link">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="product-details container">
+        <div class="product-details__gallery">
+          <img
+            src="../assets/images/products/suitcase-yellow.png"
+            alt="yellow suitcase"
+            class="product-details__image"
+          />
+          <ul class="product-details__thumbs">
+            <li>
+              <img
+                src="../assets/images/products/suitcase-yellow-1.png"
+                alt=""
+                class="product-details__thumb"
+              />
+            </li>
+            <li>
+              <img
+                src="../assets/images/products/suitcase-yellow-2.png"
+                alt=""
+                class="product-details__thumb"
+              />
+            </li>
+            <li>
+              <img
+                src="../assets/images/products/suitcase-yellow-3.png"
+                alt=""
+                class="product-details__thumb"
+              />
+            </li>
+            <li>
+              <img
+                src="../assets/images/products/suitcase-yellow-open.png"
+                alt=""
+                class="product-details__thumb"
+              />
+            </li>
+          </ul>
+        </div>
+
+        <div class="product-details__info">
+          <h1 class="product-details__title">Global Explorer Max Comfort Suitcase Pro</h1>
+          <div class="product-details__rating">
+            <p class="rating">
+              <img src="../assets/icons/ui/star.svg" alt="" class="rating__star" /><img
+                src="../assets/icons/ui/star.svg"
+                alt=""
+                class="rating__star"
+              /><img src="../assets/icons/ui/star.svg" alt="" class="rating__star" /><img
+                src="../assets/icons/ui/star.svg"
+                alt=""
+                class="rating__star"
+              /><img src="../assets/icons/ui/grey-star.svg" alt="" class="rating__star" />
+            </p>
+            <span class="product-details__review-count">(1 Clients Review)</span>
+          </div>
+          <p class="product-details__price">$250</p>
+
+          <div class="product-details__description">
+            <p>
+              The new Global Explorer Max Comfort Suitcase Pro is a bold reimagining of travel
+              essentials, designed to elevate every journey. Made with at least 30% recycled
+              materials, its lightweight yet impact-resistant shell combines eco-conscious
+              innovation with rugged durability.
+            </p>
+            <p>
+              The ergonomic handle and GlideMotion spinner wheels ensure effortless mobility while
+              making a statement in sleek design. Inside, the modular compartments and adjustable
+              straps keep your belongings secure and neatly organized, no matter the destination.
+            </p>
+          </div>
+
+          <form class="product-details__form">
+            <label class="form__field">
+              <span class="form__label">Size</span>
+              <select name="size" class="select select--bold product-details__select">
+                <option value="">Choose option</option>
+              </select>
+            </label>
+            <label class="form__field">
+              <span class="form__label">Color</span>
+              <select name="color" class="select select--bold product-details__select">
+                <option value="">Choose option</option>
+              </select>
+            </label>
+            <label class="form__field">
+              <span class="form__label">Category</span>
+              <select name="category" class="select select--bold product-details__select">
+                <option value="">Choose option</option>
+              </select>
+            </label>
+
+            <div class="product-details__actions">
+              <div class="quantity quantity--bordered">
+                <button type="button" class="quantity__button">-</button>
+                <input type="number" name="quantity" value="1" min="1" class="quantity__value" />
+                <button type="button" class="quantity__button">+</button>
+              </div>
+              <button
+                type="submit"
+                class="button button--primary button--medium button--large product-details__add"
+              >
+                Add To Cart
+              </button>
+            </div>
+          </form>
+
+          <div class="product-details__payment">
+            <span class="product-details__payment-title">Payment:</span>
+            <ul class="product-details__payment-list">
+              <li class="product-details__payment-item product-details__payment-item--visa">
+                VISA
+              </li>
+              <li class="product-details__payment-item product-details__payment-item--amex">
+                American<br />Express
+              </li>
+              <li class="product-details__payment-item product-details__payment-item--master">
+                <span class="product-details__payment-circle"></span
+                ><span class="product-details__payment-circle"></span>
+              </li>
+              <li class="product-details__payment-item product-details__payment-item--paypal">
+                PayPal
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="product-tabs container">
+        <ul class="product-tabs__list">
+          <li>
+            <button type="button" class="product-tabs__button product-tabs__button--active">
+              Details
+            </button>
+          </li>
+          <li>
+            <button type="button" class="product-tabs__button">Reviews</button>
+          </li>
+          <li>
+            <button type="button" class="product-tabs__button">Shipping Policy</button>
+          </li>
+        </ul>
+        <div class="product-tabs__content">
+          <p>
+            Vestibulum commodo sapien non elit porttitor, vitae volutpat nibh mollis. Nulla porta
+            risus id neque tempor, in efficitur justo imperdiet. Etiam a ex at ante tincidunt
+            imperdiet. Nunc congue ex vel nisl viverra, sit amet aliquet lectus ullamcorper.
+            Praesent luctus lacus non lorem elementum, eu tristique sapien suscipit. Sed bibendum,
+            ipsum nec viverra malesuada, erat nisi sodales purus, eget hendrerit dui ligula eu enim.
+            Ut non est nisi. Pellentesque tristique pretium dolor eu commodo. Proin iaculis nibh
+            vitae lectus mollis bibendum. Quisque varius eget urna sit amet luctus. Suspendisse
+            potenti. Curabitur ac placerat est, sit amet sodales risus. Pellentesque viverra dui
+            auctor, ullamcorper turpis pharetra, facilisis quam.
+          </p>
+          <p>
+            Proin iaculis nibh vitae lectus mollis bibendum. Quisque varius eget urna sit amet
+            luctus. Suspendisse potenti. Curabitur ac placerat est, sit amet sodales risus.
+            Pellentesque viverra dui auctor, ullamcorper turpis pharetra, facilisis quam. Proin
+            iaculis nibh vitae lectus mollis bibendum.
+          </p>
+          <p>
+            Quisque varius eget urna sit amet luctus. Suspendisse potenti. Curabitur ac placerat
+            est, sit amet sodales risus. Pellentesque viverra dui auctor, ullamcorper turpis
+            pharetra, facilisis quam.
+          </p>
+        </div>
+
+        <div class="product-tabs__content product-reviews" hidden>
+          <div class="product-reviews__list">
+            <h2 class="product-reviews__title">
+              1 review for Global Explorer Max Comfort Suitcase Pro
+            </h2>
+            <article class="review">
+              <img
+                src="../assets/images/avatars/customer2.png"
+                alt="Ella Harper"
+                class="review__avatar"
+              />
+              <div class="review__body">
+                <header class="review__header">
+                  <h3 class="review__author">Ella Harper</h3>
+                  <time datetime="2025-06-11" class="review__date">/ June 11, 2025</time>
+                  <p class="rating review__rating">
+                    <img src="../assets/icons/ui/star.svg" alt="" class="rating__star" /><img
+                      src="../assets/icons/ui/star.svg"
+                      alt=""
+                      class="rating__star"
+                    /><img src="../assets/icons/ui/star.svg" alt="" class="rating__star" /><img
+                      src="../assets/icons/ui/star.svg"
+                      alt=""
+                      class="rating__star"
+                    /><img src="../assets/icons/ui/grey-star.svg" alt="" class="rating__star" />
+                  </p>
+                </header>
+                <p class="review__text">
+                  Proin iaculis nibh vitae lectus mollis bibendum. Quisque varius eget urna sit amet
+                  luctus. Suspendisse potenti curabitur ac placerat est, sit amet sodales risus.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <form class="review-form">
+            <h2 class="product-reviews__title">Add Review</h2>
+            <p class="review-form__note">
+              Your email address won't be shared with anybody. Required fields have the symbol
+              <span class="form__required">*</span>
+            </p>
+            <div class="review-form__rate">
+              <span class="review-form__rate-label">Rate Product</span>
+              <div class="review-form__stars">
+                <button type="button" class="review-form__star">
+                  <img src="../assets/icons/ui/star-outline.svg" alt="" />
+                </button>
+                <button type="button" class="review-form__star">
+                  <img src="../assets/icons/ui/star-outline.svg" alt="" />
+                </button>
+                <button type="button" class="review-form__star">
+                  <img src="../assets/icons/ui/star-outline.svg" alt="" />
+                </button>
+                <button type="button" class="review-form__star">
+                  <img src="../assets/icons/ui/star-outline.svg" alt="" />
+                </button>
+                <button type="button" class="review-form__star">
+                  <img src="../assets/icons/ui/star-outline.svg" alt="" />
+                </button>
+              </div>
+            </div>
+            <textarea
+              name="review"
+              class="input input--accent input--textarea review-form__textarea"
+              placeholder="Your Review*"
+              required
+            ></textarea>
+            <div class="review-form__row">
+              <input
+                type="text"
+                name="name"
+                class="input input--accent"
+                placeholder="Your Name*"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                class="input input--accent"
+                placeholder="Your Email*"
+                required
+              />
+            </div>
+            <label class="checkbox">
+              <input type="checkbox" name="save" class="checkbox__input" />
+              Save my name, email, and website in this browser for when I leave another comment.
+            </label>
+            <button
+              type="submit"
+              class="button button--primary button--compact review-form__submit"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <section class="products related container">
+        <h2 class="related__title">You May Also Like</h2>
+        <ul class="products__list">
+          <li>
+            <article class="product-card">
+              <a href="product.html" class="product-card__image-wrap">
+                <span class="product-card__badge">Sale</span>
+                <img
+                  src="../assets/images/catalog/suitcase-black.png"
+                  alt="black suitcase"
+                  class="product-card__image"
+                />
+              </a>
+              <h3 class="product-card__title">Vel vestibulum elit tuvel euqen.</h3>
+              <p class="product-card__price">$250</p>
+              <button
+                type="button"
+                class="button button--primary button--small product-card__button"
+              >
+                Add To Cart
+              </button>
+            </article>
+          </li>
+          <li>
+            <article class="product-card">
+              <a href="product.html" class="product-card__image-wrap">
+                <img
+                  src="../assets/images/catalog/suitcase-blue.png"
+                  alt="blue suitcase"
+                  class="product-card__image"
+                />
+              </a>
+              <h3 class="product-card__title">Vel vestibulum elit tuvel euqen.</h3>
+              <p class="product-card__price">$200</p>
+              <button
+                type="button"
+                class="button button--primary button--small product-card__button"
+              >
+                Add To Cart
+              </button>
+            </article>
+          </li>
+          <li>
+            <article class="product-card">
+              <a href="product.html" class="product-card__image-wrap">
+                <span class="product-card__badge">Sale</span>
+                <img
+                  src="../assets/images/catalog/suitcase-red.png"
+                  alt="red suitcase"
+                  class="product-card__image"
+                />
+              </a>
+              <h3 class="product-card__title">Vel vestibulum elit tuvel euqen.</h3>
+              <p class="product-card__price">$300</p>
+              <button
+                type="button"
+                class="button button--primary button--small product-card__button"
+              >
+                Add To Cart
+              </button>
+            </article>
+          </li>
+          <li>
+            <article class="product-card">
+              <a href="product.html" class="product-card__image-wrap">
+                <img
+                  src="../assets/images/catalog/suitcase-orange.png"
+                  alt="orange suitcase"
+                  class="product-card__image"
+                />
+              </a>
+              <h3 class="product-card__title">Vel vestibulum elit tuvel euqen.</h3>
+              <p class="product-card__price">$350</p>
+              <button
+                type="button"
+                class="button button--primary button--small product-card__button"
+              >
+                Add To Cart
+              </button>
+            </article>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="footer">
+      <section class="benefits">
+        <div class="benefits__inner container">
+          <h2 class="benefits__title">Our Benefits</h2>
+          <ul class="benefits__list">
+            <li class="benefits__item">
+              <img src="../assets/icons/benefits/travel.svg" alt="" class="benefits__icon" />
+              <p class="benefits__text">Velit nisl sodales eget donec quis. volutpat orci.</p>
+            </li>
+            <li class="benefits__item">
+              <img src="../assets/icons/benefits/truck.svg" alt="" class="benefits__icon" />
+              <p class="benefits__text">Dolor eu varius. Morbi fermentum velit nisl.</p>
+            </li>
+            <li class="benefits__item">
+              <img src="../assets/icons/benefits/payment.svg" alt="" class="benefits__icon" />
+              <p class="benefits__text">Malesuada fames ac ante ipsum primis in faucibus.</p>
+            </li>
+            <li class="benefits__item">
+              <img src="../assets/icons/benefits/education.svg" alt="" class="benefits__icon" />
+              <p class="benefits__text">Nisl sodales eget donec quis. volutpat orci.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="footer__main container">
+        <div class="footer__columns">
+          <nav class="footer__column">
+            <h3 class="footer__title">
+              <a href="about.html" class="link">About Us</a>
+            </h3>
+            <ul class="footer__links">
+              <li><a href="#" class="link">Organisation</a></li>
+              <li><a href="#" class="link">Partners</a></li>
+              <li><a href="#" class="link">Clients</a></li>
+            </ul>
+          </nav>
+          <nav class="footer__column">
+            <h3 class="footer__title">Interesting Links</h3>
+            <ul class="footer__links">
+              <li><a href="#" class="link">Photo Gallery</a></li>
+              <li><a href="#" class="link">Our Team</a></li>
+              <li><a href="#" class="link">Socials</a></li>
+            </ul>
+          </nav>
+          <nav class="footer__column">
+            <h3 class="footer__title">Achievements</h3>
+            <ul class="footer__links">
+              <li><a href="#" class="link">Winning Awards</a></li>
+              <li><a href="#" class="link">Press</a></li>
+              <li><a href="#" class="link">Our Amazing Clients</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__shipping">
+          <h3 class="footer__title">Shipping Information</h3>
+          <p class="footer__text">
+            Nulla eleifend pulvinar purus, molestie euismod odio imperdiet ac. Ut sit amet erat nec
+            nibh rhoncus varius in non lorem. Donec interdum, lectus in convallis pulvinar, enim
+            elit porta sapien, vel finibus erat felis sed neque. Etiam aliquet neque sagittis erat
+            tincidunt aliquam.
+          </p>
+        </div>
+
+        <div class="footer__contact-text">
+          <h3 class="footer__title">
+            <a href="contact.html" class="link">Contact Us</a>
+          </h3>
+          <p class="footer__text">
+            Bendum dolor eu varius. Morbi fermentum velitsodales egetonec. volutpat orci. Sed ipsum
+            felis, tristique egestas et, convallis ac velitn consequat nec luctus.
+          </p>
+        </div>
+
+        <address class="footer__contacts">
+          <ul class="footer__contacts-list">
+            <li class="footer__contact">
+              <img src="../assets/icons/contacts/phone.svg" alt="" class="footer__contact-icon" />
+              <span>Phone: <a href="tel:+632366322">(+63) 236 6322</a></span>
+            </li>
+            <li class="footer__contact">
+              <img src="../assets/icons/contacts/mail.svg" alt="" class="footer__contact-icon" />
+              <span><a href="mailto:public@news.com">public@news.com</a></span>
+            </li>
+            <li class="footer__contact">
+              <img src="../assets/icons/contacts/clock.svg" alt="" class="footer__contact-icon" />
+              <span>Mon - Fri: 10am - 6pm<br />Sat - Sun: 10am - 6pm</span>
+            </li>
+            <li class="footer__contact">
+              <img
+                src="../assets/icons/contacts/location.svg"
+                alt=""
+                class="footer__contact-icon"
+              />
+              <span>639 Jade Valley,<br />Washington Dc</span>
+            </li>
+          </ul>
+        </address>
+      </div>
+
+      <p class="footer__copyright">&copy; Copyright 2025</p>
+    </footer>
+
+    <dialog class="modal">
+      <form method="dialog" class="login">
+        <label class="form__field">
+          <span class="login__label">Email address <span class="form__required">*</span></span>
+          <input type="email" name="email" class="input input--accent login__input" required />
+        </label>
+        <label class="form__field">
+          <span class="login__label">Password <span class="form__required">*</span></span>
+          <span class="login__password">
+            <input
+              type="password"
+              name="password"
+              class="input input--accent login__input"
+              required
+            />
+            <button type="button" class="login__toggle">
+              <img src="../assets/icons/ui/eye.svg" alt="" />
+            </button>
+          </span>
+        </label>
+        <div class="login__options">
+          <label class="checkbox login__remember">
+            <input type="checkbox" name="remember" class="checkbox__input" />
+            Remember me
+          </label>
+          <a href="#" class="link link--accent login__forgot">Forgot Your Password?</a>
+        </div>
+        <button type="submit" class="button button--primary button--compact login__submit">
+          Log In
+        </button>
+      </form>
+    </dialog>
+  </body>
+</html>

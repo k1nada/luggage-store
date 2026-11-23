@@ -1,0 +1,235 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/placeholders';
+
+.hero {
+  background: $color-background-light;
+}
+
+.hero__inner {
+  display: grid;
+  align-items: center;
+  min-height: 860px;
+}
+
+.hero__content,
+.hero__image {
+  grid-area: 1 / 1;
+}
+
+.hero__content {
+  position: relative;
+  z-index: $z-index-content;
+  max-width: 50%;
+}
+
+.hero__title {
+  max-width: 500px;
+  margin-bottom: $space-l;
+  font-size: $font-size-5xl;
+  font-weight: $font-weight-black;
+  line-height: $line-height-heading;
+}
+
+.hero__text {
+  max-width: 640px;
+  margin-bottom: $space-xl;
+  font-size: $font-size-m;
+  line-height: $line-height-base;
+  color: $color-text-muted;
+}
+
+.hero__image {
+  justify-self: end;
+  width: 60%;
+  max-width: 760px;
+}
+
+.promo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 570px;
+  margin-top: -$promo-overlap;
+  box-shadow: $shadow-card;
+}
+
+.promo__review {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: $space-3xl;
+  background: $color-white;
+}
+
+.promo__author {
+  display: flex;
+  align-items: center;
+  gap: $space-s;
+  margin-bottom: $space-l;
+}
+
+.promo__avatar {
+  @include avatar(80px);
+}
+
+.promo__name {
+  margin-bottom: $space-2xs;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+}
+
+.promo__position {
+  font-size: $font-size-l;
+}
+
+.promo__title {
+  margin-bottom: $space-l;
+  font-size: $font-size-4xl;
+  font-weight: $font-weight-black;
+  line-height: $line-height-base;
+}
+
+.promo__text {
+  font-size: $font-size-l;
+  line-height: $line-height-base;
+  color: $color-text-muted;
+
+  &:not(:last-child) {
+    margin-bottom: $space-m;
+  }
+}
+
+.promo__discount {
+  @extend %background-cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: $space-3xl;
+  color: $color-white;
+  background-image:
+    linear-gradient($color-overlay-heavy, $color-overlay-heavy),
+    url('../src/assets/images/banners/suitcases-main-banner.png');
+}
+
+.promo__discount-title {
+  margin-bottom: $space-l;
+  font-size: $font-size-4xl;
+  font-weight: $font-weight-black;
+}
+
+.promo__discount-text {
+  max-width: 400px;
+  margin-bottom: $space-l;
+  font-size: $font-size-m;
+  line-height: $line-height-relaxed;
+}
+
+.travel {
+  padding: $space-section 0;
+  text-align: center;
+}
+
+.travel__title {
+  @include section-title;
+}
+
+.travel__subtitle {
+  @include section-subtitle;
+}
+
+.travel__list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, $card-width));
+  justify-content: center;
+  gap: $space-2xl;
+  text-align: left;
+}
+
+.travel__card {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient($color-overlay-light, $color-overlay-heavy);
+  }
+}
+
+.travel__image {
+  @include cover-image;
+}
+
+.travel__content {
+  position: absolute;
+  right: $space-2xl;
+  bottom: $space-2xl;
+  left: $space-2xl;
+  z-index: $z-index-content;
+  color: $color-white;
+}
+
+.travel__card-title {
+  margin-bottom: $space-s;
+  font-size: $font-size-m;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-base;
+}
+
+.travel__card-text {
+  font-size: $font-size-l;
+  line-height: $line-height-base;
+}
+
+.testimonials {
+  margin-bottom: $space-section;
+  text-align: center;
+}
+
+.testimonials__title {
+  @include section-title;
+}
+
+.testimonials__subtitle {
+  @include section-subtitle;
+}
+
+.testimonials__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: $space-m;
+}
+
+.testimonials__card {
+  @include flex-column-center;
+
+  min-height: 340px;
+  padding: $space-2xl;
+  background: $color-white;
+  box-shadow: $shadow-card;
+}
+
+.testimonials__avatar {
+  @include avatar(100px);
+
+  margin-bottom: $space-l;
+}
+
+.testimonials__text {
+  margin-bottom: $space-m;
+  font-size: $font-size-m;
+  line-height: $line-height-relaxed;
+}
+
+.testimonials__author {
+  font-size: $font-size-m;
+  font-weight: $font-weight-bold;
+  color: $color-primary;
+}

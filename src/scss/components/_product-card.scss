@@ -1,0 +1,75 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.product-card {
+  @include flex-column-center;
+
+  padding-bottom: $space-m;
+  text-align: center;
+}
+
+.product-card__image-wrap {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 0.74;
+  margin-bottom: $space-l;
+  overflow: hidden;
+  background: $color-background-light;
+  box-shadow: $shadow-card;
+}
+
+.product-card__image {
+  @include cover-image;
+}
+
+.product-card__badge {
+  position: absolute;
+  top: $space-xs;
+  left: $space-xs;
+  z-index: $z-index-content;
+  padding: $space-3xs $space-2xs;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  color: $color-white;
+  background: $color-primary;
+}
+
+.product-card__title {
+  max-width: 200px;
+  margin-bottom: $space-xs;
+  font-size: $font-size-l;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-heading;
+}
+
+.product-card__price {
+  margin-bottom: $space-xs;
+  font-size: $font-size-l;
+  font-weight: $font-weight-bold;
+  color: $color-text-muted;
+}
+
+.product-card__button {
+  font-size: $font-size-l;
+}
+
+.products {
+  margin-bottom: $space-section;
+  text-align: center;
+}
+
+.products__title {
+  @include section-title;
+}
+
+.products__subtitle {
+  @include section-subtitle;
+}
+
+.products__list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: $space-2xl;
+}

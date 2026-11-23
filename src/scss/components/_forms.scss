@@ -1,0 +1,81 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.form {
+  display: grid;
+  gap: $space-2xl;
+}
+
+.form__field {
+  display: grid;
+  gap: $space-xs;
+}
+
+.form__label {
+  font-size: $font-size-l;
+  font-weight: $font-weight-bold;
+}
+
+.form__required {
+  color: $color-primary;
+}
+
+.input {
+  width: 100%;
+  padding: $space-xs $space-s;
+  font: inherit;
+  font-size: $font-size-s;
+  color: $color-black;
+  background: $color-white;
+  border: $border-width solid $color-border;
+
+  &::placeholder {
+    color: $color-text-muted;
+  }
+}
+
+.input--accent {
+  border: $border-width-medium solid $color-primary-light;
+}
+
+.input--textarea {
+  resize: vertical;
+}
+
+.select {
+  width: 100%;
+  padding: $space-xs $space-2xl $space-xs $space-s;
+  font: inherit;
+  color: $color-text-muted;
+  background: $color-white;
+  border: $border-width solid $color-border;
+  appearance: none;
+  cursor: pointer;
+}
+
+.select--bold {
+  border-width: $border-width-medium;
+}
+
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-xs;
+  font-size: $font-size-xs;
+  color: $color-text-muted;
+  cursor: pointer;
+}
+
+.checkbox__input {
+  @include square($space-s);
+
+  background: $color-white;
+  border: $border-width solid $color-text-muted;
+  appearance: none;
+  cursor: pointer;
+
+  &:checked {
+    background: $color-primary;
+    border-color: $color-primary;
+  }
+}

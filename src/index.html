@@ -3,8 +3,537 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../dist/main.css" />
-    <title>Document</title>
+    <title>Best Shop</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <div class="header__top container">
+        <ul class="header__socials">
+          <li>
+            <a href="https://facebook.com" class="header__social">
+              <img src="assets/icons/social/facebook.svg" alt="" class="header__social-icon" />
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com" class="header__social">
+              <img src="assets/icons/social/twitter.svg" alt="" class="header__social-icon" />
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com" class="header__social">
+              <img src="assets/icons/social/instagram.svg" alt="" class="header__social-icon" />
+            </a>
+          </li>
+        </ul>
+
+        <a href="index.html" class="header__logo">
+          <span class="header__logo-icon">
+            <img src="assets/icons/logo/bg.svg" alt="" class="header__logo-bg" />
+            <img src="assets/icons/logo/logo-luggage.svg" alt="" class="header__logo-luggage" />
+          </span>
+          <img src="assets/icons/logo/best-shop.svg" alt="" class="header__logo-text" />
+        </a>
+
+        <div class="header__actions">
+          <button type="button" class="header__action">
+            <img src="assets/icons/ui/user.svg" alt="" class="header__action-icon" />
+          </button>
+          <a href="html/cart.html" class="header__action header__cart-link">
+            <img src="assets/icons/ui/shopping-cart.svg" alt="" class="header__action-icon" />
+            <span class="header__cart-count" hidden>0</span>
+          </a>
+        </div>
+      </div>
+
+      <nav class="header__nav container">
+        <ul class="header__menu">
+          <li>
+            <a href="index.html" class="link header__menu-link header__menu-link--active">Home</a>
+          </li>
+          <li>
+            <a href="html/catalog.html" class="link header__menu-link">Catalog</a>
+          </li>
+          <li>
+            <a href="html/about.html" class="link header__menu-link">About Us</a>
+          </li>
+          <li>
+            <a href="html/contact.html" class="link header__menu-link">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero__inner container">
+          <div class="hero__content">
+            <h1 class="hero__title">Smart Styles for Every Destination</h1>
+            <p class="hero__text">
+              Phasellus risus turpis, pretium sit amet magna non, molestie ultricies enim. Nullam
+              pulvinar felis at metus.
+            </p>
+            <a href="html/catalog.html" class="button button--primary">View All Items</a>
+          </div>
+          <img src="assets/images/banners/hero-suitcase.png" alt="Suitcase" class="hero__image" />
+        </div>
+      </section>
+
+      <section class="promo container">
+        <article class="promo__review">
+          <div class="promo__author">
+            <img
+              src="assets/images/avatars/avatar.png"
+              alt="Lillian Bennett"
+              class="promo__avatar"
+            />
+            <div class="promo__author-info">
+              <p class="promo__name">Lillian Bennett</p>
+              <p class="promo__position">Chief Marketing Officer</p>
+            </div>
+          </div>
+          <h2 class="promo__title">Aliquam Faucibus Odionecom.</h2>
+          <p class="promo__text">
+            Duis vestibulum elit vel neque pharetra vulputate. Quisque scelerisque nisi urna. Duis
+            rutrum non risus in imperdiet. Proin molestie accumsan nulla sit.
+          </p>
+          <p class="promo__text">
+            Namaki duis vestibulum elit vel neque pharetra vulputate. Quisque scelerisque nisi urna.
+          </p>
+        </article>
+
+        <div class="promo__discount">
+          <h2 class="promo__discount-title">25 % Discount</h2>
+          <p class="promo__discount-text">
+            Curabitur vulputate arcu odio, ac facilisis diam accumsan ut. Ut imperdiet et leo in
+            vulputate.
+          </p>
+          <a href="html/catalog.html" class="button button--primary button--large">Get Discount</a>
+        </div>
+      </section>
+
+      <section class="travel container">
+        <h2 class="travel__title">Travel suitcases</h2>
+        <p class="travel__subtitle">Duis vestibulum elit vel neque pharetra</p>
+
+        <ul class="travel__list">
+          <li class="travel__card">
+            <img src="assets/images/travel/suitcase-real-life-1.png" alt="" class="travel__image" />
+            <div class="travel__content">
+              <h3 class="travel__card-title">Duis vestibulum elit vel neque.</h3>
+              <p class="travel__card-text">
+                Duis vestibulum vel neque pharetra vulputate. Quisque scelerisque nisi.
+              </p>
+            </div>
+          </li>
+          <li class="travel__card">
+            <img src="assets/images/travel/suitcase-real-life-2.png" alt="" class="travel__image" />
+            <div class="travel__content">
+              <h3 class="travel__card-title">Neque vestibulum elit nequvel.</h3>
+              <p class="travel__card-text">
+                Duis vestibulum vel neque pharetra vulputate. Quisque scelerisque nisi.
+              </p>
+            </div>
+          </li>
+          <li class="travel__card">
+            <img src="assets/images/travel/suitcase-real-life-3.png" alt="" class="travel__image" />
+            <div class="travel__content">
+              <h3 class="travel__card-title">Elituis stibulum elit velneque.</h3>
+              <p class="travel__card-text">
+                Duis vestibulum vel neque pharetra vulputate. Quisque scelerisque nisi.
+              </p>
+            </div>
+          </li>
+          <li class="travel__card">
+            <img src="assets/images/travel/suitcase-real-life-4.png" alt="" class="travel__image" />
+            <div class="travel__content">
+              <h3 class="travel__card-title">Vel vestibulum elit tuvel euqen.</h3>
+              <p class="travel__card-text">
+                Duis vestibulum vel neque pharetra vulputate. Quisque scelerisque nisi.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="products container">
+        <h2 class="products__title">Selected Products</h2>
+        <p class="products__subtitle">Duis vestibulum elit vel neque pharetra</p>
+
+        <ul class="products__list">
+          <li>
+            <article class="product-card">
+              <a href="html/product.html" class="product-card__image-wrap">
+                <span class="product-card__badge">Sale</span>
+                <img
+                  src="assets/images/products/suitcase-red.png"
+                  alt="red suitcase"
+                  class="product-card__image"
+                />
+              </a>
+              <h3 class="product-card__title">Vel vestibulum elit tuvel euqen.</h3>
+              <p class="product-card__price">$250</p>
+              <button
+                type="button"
+                class="button button--primary button--small product-card__button"
+              >
+                Add To Cart
+              </button>
+            </article>
+          </li>
+          <li>
+            <article class="product-card">
+              <a href="html/product.html" class="product-card__image-wrap">
+                <span class="product-card__badge">Sale</span>
+                <img
+                  src="assets/images/products/suitcase-beige.png"
+                  alt="beige suitcase"
+                  class="product-card__image"
+                />
+              </a>
+              <h3 class="product-card__title">Vel vestibulum elit tuvel euqen.</h3>
+              <p class="product-card__price">$200</p>
+              <button
+                type="button"
+                class="button button--primary button--small product-card__button"
+              >
+                Add To Cart
+              </button>
+            </article>
+          </li>
+          <li>
+            <article class="product-card">
+              <a href="html/product.html" class="product-card__image-wrap">
+                <span class="product-card__badge">Sale</span>
+                <img
+                  src="assets/images/products/suitcase-pink.png"
+                  alt="pink suitcase"
+                  class="product-card__image"
+                />
+              </a>
+              <h3 class="product-card__title">Vel vestibulum elit tuvel euqen.</h3>
+              <p class="product-card__price">$300</p>
+              <button
+                type="button"
+                class="button button--primary button--small product-card__button"
+              >
+                Add To Cart
+              </button>
+            </article>
+          </li>
+          <li>
+            <article class="product-card">
+              <a href="html/product.html" class="product-card__image-wrap">
+                <span class="product-card__badge">Sale</span>
+                <img
+                  src="assets/images/products/suitcase-blue.png"
+                  alt="blue suitcase"
+                  class="product-card__image"
+                />
+              </a>
+              <h3 class="product-card__title">Vel vestibulum elit tuvel euqen.</h3>
+              <p class="product-card__price">$350</p>
+              <button
+                type="button"
+                class="button button--primary button--small product-card__button"
+              >
+                Add To Cart
+              </button>
+            </article>
+          </li>
+        </ul>
+      </section>
+
+      <section class="offer container">
+        <div class="offer__discount">
+          <p class="offer__percent">50%</p>
+          <p class="offer__note">Curabitur vulputate arcu odio, ac facilisis diam.</p>
+        </div>
+        <div class="offer__content">
+          <h2 class="offer__title">Offer Of The Month</h2>
+          <p class="offer__text">
+            Curabitur vulputate arcu odio, ac facilisis diam accumsan ut. Ut imperdiet et leo in
+            vulputate.
+          </p>
+          <a href="html/catalog.html" class="button button--primary offer__button">
+            Get Offer Today
+          </a>
+        </div>
+      </section>
+
+      <section class="products container">
+        <h2 class="products__title">New Products Arrival</h2>
+        <p class="products__subtitle">Duis vestibulum elit vel neque pharetra</p>
+
+        <ul class="products__list">
+          <li>
+            <article class="product-card">
+              <a href="html/product.html" class="product-card__image-wrap">
+                <img
+                  src="assets/images/products/suitcase-hand-grey.png"
+                  alt="grey suitcase"
+                  class="product-card__image"
+                />
+              </a>
+              <h3 class="product-card__title">Vel vestibulum elit tuvel euqen.</h3>
+              <p class="product-card__price">$150</p>
+              <a
+                href="html/product.html"
+                class="button button--primary button--small product-card__button"
+              >
+                View Product
+              </a>
+            </article>
+          </li>
+          <li>
+            <article class="product-card">
+              <a href="html/product.html" class="product-card__image-wrap">
+                <span class="product-card__badge">Sale</span>
+                <img
+                  src="assets/images/catalog/suitcase-yellow.png"
+                  alt="yellow suitcase"
+                  class="product-card__image"
+                />
+              </a>
+              <h3 class="product-card__title">Vel vestibulum elit tuvel euqen.</h3>
+              <p class="product-card__price">$450</p>
+              <a
+                href="html/product.html"
+                class="button button--primary button--small product-card__button"
+              >
+                View Product
+              </a>
+            </article>
+          </li>
+          <li>
+            <article class="product-card">
+              <a href="html/product.html" class="product-card__image-wrap">
+                <img
+                  src="assets/images/products/suitcase-light-blue.png"
+                  alt="light blue suitcase"
+                  class="product-card__image"
+                />
+              </a>
+              <h3 class="product-card__title">Vel vestibulum elit tuvel euqen.</h3>
+              <p class="product-card__price">$250</p>
+              <a
+                href="html/product.html"
+                class="button button--primary button--small product-card__button"
+              >
+                View Product
+              </a>
+            </article>
+          </li>
+          <li>
+            <article class="product-card">
+              <a href="html/product.html" class="product-card__image-wrap">
+                <span class="product-card__badge">Sale</span>
+                <img
+                  src="assets/images/products/suitcase-dark-blue.png"
+                  alt="dark blue suitcase"
+                  class="product-card__image"
+                />
+              </a>
+              <h3 class="product-card__title">Vel vestibulum elit tuvel euqen.</h3>
+              <p class="product-card__price">$200</p>
+              <a
+                href="html/product.html"
+                class="button button--primary button--small product-card__button"
+              >
+                View Product
+              </a>
+            </article>
+          </li>
+        </ul>
+      </section>
+
+      <section class="testimonials container">
+        <h2 class="testimonials__title">Our Grateful Customers</h2>
+        <p class="testimonials__subtitle">Duis vestibulum elit vel neque pharetra</p>
+
+        <ul class="testimonials__list">
+          <li>
+            <article class="testimonials__card">
+              <img
+                src="assets/images/avatars/customer1.png"
+                alt="Ethan Wade"
+                class="testimonials__avatar"
+              />
+              <p class="testimonials__text">
+                Curabitur vulputate arcu odio, ac facilisis diam accumsan ut. Ut mperdiet et leo in
+                vulputate.
+              </p>
+              <p class="testimonials__author">Ethan Wade, New York</p>
+            </article>
+          </li>
+          <li>
+            <article class="testimonials__card">
+              <img
+                src="assets/images/avatars/customer2.png"
+                alt="Jane Reyes"
+                class="testimonials__avatar"
+              />
+              <p class="testimonials__text">
+                Curabitur vulputate arcu odio, ac facilisis diam accumsan ut. Ut mperdiet et leo in
+                vulputate.
+              </p>
+              <p class="testimonials__author">Jane Reyes, California</p>
+            </article>
+          </li>
+          <li>
+            <article class="testimonials__card">
+              <img
+                src="assets/images/avatars/customer3.png"
+                alt="Erica Banks"
+                class="testimonials__avatar"
+              />
+              <p class="testimonials__text">
+                Curabitur vulputate arcu odio, ac facilisis diam accumsan ut. Ut mperdiet et leo in
+                vulputate.
+              </p>
+              <p class="testimonials__author">Erica Banks, Miami</p>
+            </article>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="footer">
+      <section class="benefits">
+        <div class="benefits__inner container">
+          <h2 class="benefits__title">Our Benefits</h2>
+          <ul class="benefits__list">
+            <li class="benefits__item">
+              <img src="assets/icons/benefits/travel.svg" alt="" class="benefits__icon" />
+              <p class="benefits__text">Velit nisl sodales eget donec quis. volutpat orci.</p>
+            </li>
+            <li class="benefits__item">
+              <img src="assets/icons/benefits/truck.svg" alt="" class="benefits__icon" />
+              <p class="benefits__text">Dolor eu varius. Morbi fermentum velit nisl.</p>
+            </li>
+            <li class="benefits__item">
+              <img src="assets/icons/benefits/payment.svg" alt="" class="benefits__icon" />
+              <p class="benefits__text">Malesuada fames ac ante ipsum primis in faucibus.</p>
+            </li>
+            <li class="benefits__item">
+              <img src="assets/icons/benefits/education.svg" alt="" class="benefits__icon" />
+              <p class="benefits__text">Nisl sodales eget donec quis. volutpat orci.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="footer__main container">
+        <div class="footer__columns">
+          <nav class="footer__column">
+            <h3 class="footer__title">
+              <a href="html/about.html" class="link">About Us</a>
+            </h3>
+            <ul class="footer__links">
+              <li><a href="#" class="link">Organisation</a></li>
+              <li><a href="#" class="link">Partners</a></li>
+              <li><a href="#" class="link">Clients</a></li>
+            </ul>
+          </nav>
+          <nav class="footer__column">
+            <h3 class="footer__title">Interesting Links</h3>
+            <ul class="footer__links">
+              <li><a href="#" class="link">Photo Gallery</a></li>
+              <li><a href="#" class="link">Our Team</a></li>
+              <li><a href="#" class="link">Socials</a></li>
+            </ul>
+          </nav>
+          <nav class="footer__column">
+            <h3 class="footer__title">Achievements</h3>
+            <ul class="footer__links">
+              <li><a href="#" class="link">Winning Awards</a></li>
+              <li><a href="#" class="link">Press</a></li>
+              <li><a href="#" class="link">Our Amazing Clients</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__shipping">
+          <h3 class="footer__title">Shipping Information</h3>
+          <p class="footer__text">
+            Nulla eleifend pulvinar purus, molestie euismod odio imperdiet ac. Ut sit amet erat nec
+            nibh rhoncus varius in non lorem. Donec interdum, lectus in convallis pulvinar, enim
+            elit porta sapien, vel finibus erat felis sed neque. Etiam aliquet neque sagittis erat
+            tincidunt aliquam.
+          </p>
+        </div>
+
+        <div class="footer__contact-text">
+          <h3 class="footer__title">
+            <a href="html/contact.html" class="link">Contact Us</a>
+          </h3>
+          <p class="footer__text">
+            Bendum dolor eu varius. Morbi fermentum velitsodales egetonec. volutpat orci. Sed ipsum
+            felis, tristique egestas et, convallis ac velitn consequat nec luctus.
+          </p>
+        </div>
+
+        <address class="footer__contacts">
+          <ul class="footer__contacts-list">
+            <li class="footer__contact">
+              <img src="assets/icons/contacts/phone.svg" alt="" class="footer__contact-icon" />
+              <span>Phone: <a href="tel:+632366322">(+63) 236 6322</a></span>
+            </li>
+            <li class="footer__contact">
+              <img src="assets/icons/contacts/mail.svg" alt="" class="footer__contact-icon" />
+              <span><a href="mailto:public@news.com">public@news.com</a></span>
+            </li>
+            <li class="footer__contact">
+              <img src="assets/icons/contacts/clock.svg" alt="" class="footer__contact-icon" />
+              <span>Mon - Fri: 10am - 6pm<br />Sat - Sun: 10am - 6pm</span>
+            </li>
+            <li class="footer__contact">
+              <img src="assets/icons/contacts/location.svg" alt="" class="footer__contact-icon" />
+              <span>639 Jade Valley,<br />Washington Dc</span>
+            </li>
+          </ul>
+        </address>
+      </div>
+
+      <p class="footer__copyright">&copy; Copyright 2025</p>
+    </footer>
+
+    <dialog class="modal">
+      <form method="dialog" class="login">
+        <label class="form__field">
+          <span class="login__label">Email address <span class="form__required">*</span></span>
+          <input type="email" name="email" class="input input--accent login__input" required />
+        </label>
+        <label class="form__field">
+          <span class="login__label">Password <span class="form__required">*</span></span>
+          <span class="login__password">
+            <input
+              type="password"
+              name="password"
+              class="input input--accent login__input"
+              required
+            />
+            <button type="button" class="login__toggle">
+              <img src="assets/icons/ui/eye.svg" alt="" />
+            </button>
+          </span>
+        </label>
+        <div class="login__options">
+          <label class="checkbox login__remember">
+            <input type="checkbox" name="remember" class="checkbox__input" />
+            Remember me
+          </label>
+          <a href="#" class="link link--accent login__forgot">Forgot Your Password?</a>
+        </div>
+        <button type="submit" class="button button--primary button--compact login__submit">
+          Log In
+        </button>
+      </form>
+    </dialog>
+  </body>
 </html>

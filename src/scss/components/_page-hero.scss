@@ -1,0 +1,43 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/placeholders';
+
+.page-hero {
+  @extend %background-cover;
+
+  display: grid;
+  align-items: center;
+  min-height: 550px;
+  margin-bottom: $space-section;
+  text-align: center;
+  color: $color-white;
+  background-color: $color-dark;
+}
+
+.page-hero--about {
+  @include hero-image('../src/assets/images/about-us/banner.jpg');
+}
+
+.page-hero--contact {
+  @include hero-image('../src/assets/images/contact-us/banner.jpg', $color-overlay-strong);
+}
+
+.page-hero--cart {
+  @include hero-image('../src/assets/images/my-cart/banner.jpg', $color-overlay-strong);
+
+  min-height: 230px;
+  margin-bottom: $space-3xl;
+}
+
+.page-hero__title {
+  font-size: $font-size-5xl;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+}
+
+.page-hero__text {
+  max-width: 430px;
+  margin: $space-m auto 0;
+  font-size: $font-size-m;
+  line-height: $line-height-relaxed;
+}

@@ -1,0 +1,116 @@
+@use '../abstracts/variables' as *;
+
+.footer {
+  font-family: $font-secondary;
+  font-size: $font-size-s;
+}
+
+.footer__main {
+  display: grid;
+  grid-template-areas:
+    'columns about'
+    'shipping contacts';
+  grid-template-columns: 1fr 370px;
+  gap: $space-3xl $space-2xl;
+  padding: $space-section 0;
+}
+
+.footer__columns {
+  grid-area: columns;
+  display: grid;
+  grid-template-columns: minmax(0, 230px) minmax(0, 260px) auto;
+}
+
+.footer__title {
+  margin-bottom: $space-l;
+  font-size: $font-size-m;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-none;
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: $space-s;
+}
+
+.footer__shipping {
+  grid-area: shipping;
+  max-width: 600px;
+}
+
+.footer__contact-text {
+  grid-area: about;
+  max-width: 350px;
+}
+
+.footer__text {
+  line-height: $line-height-relaxed;
+}
+
+.footer__contacts {
+  grid-area: contacts;
+  align-self: end;
+  font-style: normal;
+}
+
+.footer__contacts-list {
+  display: grid;
+  grid-template-columns: 220px auto;
+  row-gap: $space-l;
+}
+
+.footer__contact {
+  display: flex;
+  align-items: center;
+  gap: $space-s;
+  line-height: $line-height-relaxed;
+}
+
+.footer__contact-icon {
+  flex-shrink: 0;
+}
+
+.footer__copyright {
+  padding-bottom: $space-2xl;
+  text-align: center;
+  color: $color-text-muted;
+}
+
+.benefits {
+  min-height: 190px;
+  padding: $space-2xl 0;
+  color: $color-white;
+  background:
+    url('../src/assets/images/banners/waves.svg') center / 100% 100% no-repeat,
+    $color-dark;
+}
+
+.benefits__title {
+  margin-bottom: $space-xl;
+  font-size: $font-size-l;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-none;
+}
+
+.benefits__list {
+  display: flex;
+  justify-content: space-between;
+  gap: $space-l;
+}
+
+.benefits__item {
+  display: flex;
+  align-items: center;
+  gap: $space-l;
+}
+
+.benefits__icon {
+  flex-shrink: 0;
+}
+
+.benefits__text {
+  max-width: 200px;
+  font-size: $font-size-m;
+  line-height: $line-height-relaxed;
+}

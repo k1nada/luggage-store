@@ -1,0 +1,121 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.catalog {
+  display: grid;
+  grid-template-columns: auto 340px;
+  justify-content: space-between;
+  align-items: start;
+  padding-top: $space-3xl;
+  margin-bottom: $space-section;
+}
+
+.catalog__toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $space-xl;
+}
+
+.catalog__results {
+  font-size: $font-size-m;
+  color: $color-dark;
+}
+
+.catalog__sort {
+  width: 200px;
+}
+
+.catalog__sort-select {
+  font-size: $font-size-m;
+  color: $color-dark;
+}
+
+.catalog__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, $card-width));
+  gap: $space-xl $space-xs;
+}
+
+.catalog__sidebar-title {
+  margin-top: $space-xl;
+  margin-bottom: $space-l;
+  font-size: $font-size-m;
+  font-weight: $font-weight-bold;
+}
+
+.best-sets {
+  display: flex;
+  flex-direction: column;
+  gap: $space-l;
+}
+
+.best-set {
+  display: flex;
+  align-items: flex-start;
+  gap: $space-m;
+}
+
+.best-set__image {
+  @include square(90px);
+
+  box-shadow: $shadow-card;
+}
+
+.best-set__content {
+  font-size: $font-size-s;
+  line-height: $line-height-base;
+}
+
+.best-set__title {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.filters {
+  padding-top: $space-3xl;
+}
+
+.filters__row {
+  display: grid;
+  grid-template-columns: repeat(3, 300px) auto;
+  align-items: start;
+  gap: $space-l;
+  padding: $space-l $space-2xs;
+  border-top: $border-width-medium solid $color-primary;
+  border-bottom: $border-width-medium solid $color-primary;
+}
+
+.filters__label {
+  color: $color-dark;
+}
+
+.filters__toggle {
+  font-size: $font-size-s;
+  text-align: left;
+}
+
+.filters__sales {
+  @include square($space-l);
+
+  margin-top: $space-2xs;
+  background: $color-border;
+  border-radius: 50%;
+  appearance: none;
+  cursor: pointer;
+
+  &:checked {
+    background: radial-gradient(circle, $color-black 5px, $color-border 6px);
+  }
+}
+
+.filters__actions {
+  display: flex;
+  gap: $space-m;
+  padding: 0 $space-2xs;
+  margin-top: $space-3xl;
+}
+
+.filters__button {
+  min-width: 220px;
+}

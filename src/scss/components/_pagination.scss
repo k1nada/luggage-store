@@ -1,0 +1,46 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/placeholders';
+
+.pagination {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  margin-top: $space-2xl;
+}
+
+.pagination__list {
+  grid-column: 2;
+  display: flex;
+  gap: $space-xs;
+}
+
+.pagination__link {
+  @extend %flex-center;
+  @include square(40px);
+
+  font-size: $font-size-s;
+  font-weight: $font-weight-bold;
+}
+
+.pagination__link--active {
+  color: $color-white;
+  background: $color-primary;
+}
+
+.pagination__next {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  gap: $space-xs;
+  padding: $space-xs $space-m;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  border: $border-width-medium solid $color-primary;
+  border-radius: $border-radius;
+
+  &::after {
+    content: url('../src/assets/icons/ui/arrow-right.svg');
+  }
+}

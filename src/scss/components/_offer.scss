@@ -1,0 +1,55 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/placeholders';
+
+.offer {
+  @extend %background-cover;
+
+  display: grid;
+  grid-template-columns: 1fr 450px;
+  gap: $space-2xl;
+  align-items: center;
+  min-height: 410px;
+  margin-bottom: $space-section;
+  padding: $space-2xl $space-4xl $space-2xl $space-section;
+  color: $color-white;
+  background-image:
+    linear-gradient($color-overlay-medium, $color-overlay-medium),
+    url('../src/assets/images/banners/overlay.png');
+  box-shadow: $shadow-card;
+}
+
+.offer__percent {
+  font-size: $font-size-display;
+  font-weight: $font-weight-black;
+  line-height: $line-height-none;
+  letter-spacing: -4px;
+}
+
+.offer__note {
+  margin-top: $space-xs;
+  padding-left: $space-m;
+  font-size: $font-size-l;
+}
+
+.offer__title {
+  margin-bottom: $space-xl;
+  font-size: $font-size-4xl;
+  font-weight: $font-weight-black;
+}
+
+.offer--about {
+  .offer__percent,
+  .offer__title {
+    font-weight: $font-weight-bold;
+  }
+}
+
+.offer__text {
+  margin-bottom: $space-xl;
+  font-size: $font-size-l;
+  line-height: $line-height-base;
+}
+
+.offer__button {
+  min-width: $button-min-width;
+}

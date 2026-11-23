@@ -1,0 +1,41 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/placeholders';
+
+.button {
+  @extend %reset-button;
+
+  display: inline-block;
+  padding: $space-m $space-xl;
+  font-size: $font-size-m;
+  font-weight: $font-weight-bold;
+  text-align: center;
+}
+
+.button--primary {
+  color: $color-white;
+  background: $color-primary;
+}
+
+.button--medium {
+  padding: $space-s $space-l;
+  font-size: $font-size-s;
+}
+
+.button--small {
+  padding: $space-2xs $space-xl;
+  font-size: $font-size-s;
+}
+
+.button--uppercase {
+  text-transform: uppercase;
+}
+
+.button--compact {
+  padding: $space-xs $space-xl;
+  font-size: $font-size-xs;
+  text-transform: uppercase;
+}
+
+.button--large {
+  font-size: $font-size-l;
+}

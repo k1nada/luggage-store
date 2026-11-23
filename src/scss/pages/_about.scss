@@ -1,0 +1,74 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/placeholders';
+
+.new-arrivals {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 620px);
+  gap: $space-xl;
+  margin-bottom: $space-section;
+}
+
+.new-arrivals__title {
+  @include section-title;
+
+  margin-bottom: $space-xl;
+}
+
+.new-arrivals__text {
+  display: grid;
+  gap: $space-m;
+  margin-bottom: $space-xl;
+  font-size: $font-size-m;
+  line-height: $line-height-relaxed;
+  color: $color-text-muted;
+}
+
+.new-arrivals__button {
+  min-width: $button-min-width;
+}
+
+.new-arrivals__image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  background: $color-background-light;
+}
+
+.team {
+  margin-bottom: $space-section;
+  text-align: center;
+}
+
+.team__title {
+  @include section-title;
+  @extend %title-underline;
+
+  padding-bottom: $space-xs;
+  margin-bottom: $space-3xl;
+}
+
+.team__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: $space-xl;
+}
+
+.team__image {
+  width: 100%;
+  height: 340px;
+  margin-bottom: $space-xl;
+  object-fit: cover;
+  background: $color-background-light;
+}
+
+.team__name {
+  margin-bottom: $space-l;
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+}
+
+.team__role {
+  font-size: $font-size-m;
+}

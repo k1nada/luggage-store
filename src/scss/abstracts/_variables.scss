@@ -1,0 +1,66 @@
+// colors
+$color-primary: #b92770;
+$color-black: #000;
+$color-white: #fff;
+$color-dark: #504e4a;
+$color-border: #e5e5e5;
+$color-background-light: #e8e9eb;
+$color-text-muted: #5c5c5c;
+$color-primary-light: rgb(185 39 112 / 60%);
+$color-overlay-light: rgb(0 0 0 / 10%);
+$color-overlay-medium: rgb(0 0 0 / 30%);
+$color-overlay-strong: rgb(0 0 0 / 40%);
+$color-overlay-heavy: rgb(0 0 0 / 50%);
+$shadow-card: 0 12px 40px rgb(0 0 0 / 18%);
+
+// fonts
+$font-main: 'Montserrat', sans-serif;
+$font-secondary: 'Helvetica Neue', helvetica, arial, sans-serif;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+// font sizes
+$font-size-2xs: 9px;
+$font-size-xs: 12px;
+$font-size-s: 14px;
+$font-size-m: 16px;
+$font-size-l: 18px;
+$font-size-xl: 20px;
+$font-size-2xl: 24px;
+$font-size-3xl: 32px;
+$font-size-4xl: 40px;
+$font-size-5xl: 48px;
+$font-size-display: 220px;
+
+// lines
+$line-height-none: 1;
+$line-height-tight: 1.2;
+$line-height-heading: 1.4;
+$line-height-base: 1.6;
+$line-height-relaxed: 1.8;
+
+// spacing
+$space-3xs: 4px;
+$space-2xs: 8px;
+$space-xs: 12px;
+$space-s: 16px;
+$space-m: 20px;
+$space-l: 24px;
+$space-xl: 32px;
+$space-2xl: 40px;
+$space-3xl: 60px;
+$space-4xl: 80px;
+$space-section: 120px;
+
+// layout
+$container-width: 1300px;
+$page-side-padding: 20px;
+$card-width: 300px;
+$button-min-width: 200px;
+$promo-overlap: 100px;
+$border-width: 1px;
+$border-width-medium: 2px;
+$border-width-thick: 3px;
+$border-radius: 4px;
+$z-index-content: 1;
+$z-index-header: 100;
