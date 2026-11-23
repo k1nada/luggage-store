@@ -7,6 +7,7 @@
   "type": "commonjs",
   "scripts": {
     "compile": "sass src/scss:dist --no-source-map && tsc",
+    "build": "npm run compile",
     "dev": "npm run compile && live-server --open=src/index.html",
     "lint": "eslint . && stylelint \"src/**/*.scss\""
   },

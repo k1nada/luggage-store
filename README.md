@@ -19,4 +19,5 @@ npm run dev
 
 - `npm run dev`: compile SCSS and TypeScript and start a local server
 - `npm run compile`: compile SCSS and TypeScript to `dist`
+- `npm run build`: same as `compile`
 - `npm run lint`: check TypeScript files with ESLint and SCSS files with Stylelint
