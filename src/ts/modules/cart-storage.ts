@@ -2,7 +2,7 @@ import type { CartItem, Product } from '../types.js';
 
 export function getCart(): CartItem[] {
   try {
-    return JSON.parse(localStorage.getItem('cart') || '[]');
+    return JSON.parse(localStorage.getItem('cart') ?? '[]');
   } catch {
     return [];
   }

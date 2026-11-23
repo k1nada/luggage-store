@@ -73,7 +73,7 @@ reviewForm.addEventListener('submit', (event) => {
 async function init(): Promise<void> {
   const products = await loadProducts();
   const id = new URLSearchParams(window.location.search).get('id');
-  const product = (products.find((item) => item.id === id) || products[0]) as Product;
+  const product = (products.find((item) => item.id === id) ?? products[0]) as Product;
   const others = products.filter((item) => item.id !== product.id);
 
   renderProduct(product);
