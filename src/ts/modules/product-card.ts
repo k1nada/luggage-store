@@ -1,6 +1,6 @@
 import type { Product } from '../types.js';
 import { addToCart, createCartItem } from './cart-storage.js';
-import { formatPrice } from './products.js';
+import { formatPrice, getUrl } from './products.js';
 
 export function renderProductCards(
   list: HTMLElement,
@@ -10,7 +10,7 @@ export function renderProductCards(
   let html = '';
 
   products.forEach((product) => {
-    const url = `/src/html/product.html?id=${product.id}`;
+    const url = getUrl(`/src/html/product.html?id=${product.id}`);
     const saleBadge = product.salesStatus ? '<span class="product-card__badge">Sale</span>' : '';
     let buttonHtml: string;
 
@@ -25,7 +25,7 @@ export function renderProductCards(
         <article class="product-card">
           <a href="${url}" class="product-card__image-wrap">
             ${saleBadge}
-            <img src="${product.imageUrl}" alt="${product.name}" class="product-card__image" />
+            <img src="${getUrl(product.imageUrl)}" alt="${product.name}" class="product-card__image" />
           </a>
           <h3 class="product-card__title"><a href="${url}" class="link">${product.name}</a></h3>
           <p class="product-card__price">${formatPrice(product.price)}</p>

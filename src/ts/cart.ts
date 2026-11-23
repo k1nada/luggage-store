@@ -1,6 +1,6 @@
 import type { CartItem } from './types.js';
 import { getCart, saveCart } from './modules/cart-storage.js';
-import { formatPrice, loadProducts } from './modules/products.js';
+import { formatPrice, getUrl, loadProducts } from './modules/products.js';
 
 const SHIPPING = 30;
 const DISCOUNT_FROM = 3000;
@@ -20,7 +20,7 @@ const cartSection = document.querySelector('.cart') as HTMLElement;
 function createRow(item: CartItem, index: number): string {
   return `
     <tr class="cart__row">
-      <td class="cart__cell"><img src="${item.image}" alt="${item.name}" class="cart__image" /></td>
+      <td class="cart__cell"><img src="${getUrl(item.image)}" alt="${item.name}" class="cart__image" /></td>
       <td class="cart__cell cart__title">
         ${item.name}
         <span class="cart__options">Size: ${item.size}, Color: ${item.color}</span>
@@ -36,7 +36,7 @@ function createRow(item: CartItem, index: number): string {
       <td class="cart__cell">${formatPrice(item.price * item.quantity)}</td>
       <td class="cart__cell">
         <button type="button" class="cart__delete" data-action="remove" data-index="${index}">
-          <img src="/src/assets/icons/ui/trash.svg" alt="" class="cart__delete-icon" />
+          <img src="${getUrl('/src/assets/icons/ui/trash.svg')}" alt="" class="cart__delete-icon" />
         </button>
       </td>
     </tr>

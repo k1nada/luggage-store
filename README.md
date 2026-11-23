@@ -4,6 +4,8 @@ Multi-page online store. Capstone project for EPAM JavaScript Fundamentals.
 
 Built with HTML, SCSS and TypeScript, without frameworks. Product data is loaded from `src/assets/data.json`.
 
+Live demo: https://k1nada.github.io/luggage-store/
+
 ## Pages
 
 - Home
@@ -36,6 +38,7 @@ npm run dev
 ## Project structure
 
 ```text
+index.html        redirect to the home page
 src/
   index.html      home page
   html/           other pages

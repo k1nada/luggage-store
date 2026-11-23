@@ -2,7 +2,7 @@ import type { Product } from './types.js';
 import { addToCart, createCartItem } from './modules/cart-storage.js';
 import { showStatus, validateForm } from './modules/form.js';
 import { initAddToCart, renderProductCards } from './modules/product-card.js';
-import { createStars, formatPrice, loadProducts } from './modules/products.js';
+import { createStars, formatPrice, getUrl, loadProducts } from './modules/products.js';
 
 const MIN_QUANTITY = 1;
 const RELATED_COUNT = 4;
@@ -34,7 +34,7 @@ function renderProduct(product: Product): void {
   price.textContent = formatPrice(product.price);
   image.addEventListener('load', showSection);
   image.addEventListener('error', showSection);
-  image.src = product.imageUrl;
+  image.src = getUrl(product.imageUrl);
   image.alt = product.name;
   rating.innerHTML = createStars(product.rating);
 }

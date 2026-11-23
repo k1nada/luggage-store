@@ -1,6 +1,6 @@
 import type { Product } from './types.js';
 import { initAddToCart, renderProductCards } from './modules/product-card.js';
-import { createStars, formatPrice, loadProducts } from './modules/products.js';
+import { createStars, formatPrice, getUrl, loadProducts } from './modules/products.js';
 
 const PER_PAGE = 12;
 const BEST_SETS_COUNT = 5;
@@ -150,7 +150,7 @@ searchForm.addEventListener('submit', (event) => {
   const product = products.find((item) => item.name.toLowerCase().includes(query));
 
   if (query && product) {
-    window.location.href = `/src/html/product.html?id=${product.id}`;
+    window.location.href = getUrl(`/src/html/product.html?id=${product.id}`);
   } else {
     searchModal.showModal();
   }
@@ -163,12 +163,12 @@ function renderBestSets(): void {
   sets.sort(() => Math.random() - 0.5);
 
   sets.slice(0, BEST_SETS_COUNT).forEach((set) => {
-    const url = `/src/html/product.html?id=${set.id}`;
+    const url = getUrl(`/src/html/product.html?id=${set.id}`);
 
     html += `
       <li class="best-set">
         <a href="${url}" class="best-set__image-link">
-          <img src="${set.imageUrl}" alt="${set.name}" class="best-set__image" />
+          <img src="${getUrl(set.imageUrl)}" alt="${set.name}" class="best-set__image" />
         </a>
         <div class="best-set__content">
           <h3 class="best-set__title"><a href="${url}">${set.name}</a></h3>
