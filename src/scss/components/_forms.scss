@@ -67,7 +67,7 @@
 }
 
 .checkbox__input {
-  @include square($space-s);
+  @include square(16px);
 
   background: $color-white;
   border: $border-width solid $color-text-muted;

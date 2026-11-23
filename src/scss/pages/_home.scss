@@ -26,7 +26,7 @@
 .hero__title {
   max-width: 500px;
   margin-bottom: $space-l;
-  font-size: $font-size-5xl;
+  font-size: $font-size-h1;
   font-weight: $font-weight-black;
   line-height: $line-height-heading;
 }
@@ -84,7 +84,7 @@
 
 .promo__title {
   margin-bottom: $space-l;
-  font-size: $font-size-4xl;
+  font-size: $font-size-h2;
   font-weight: $font-weight-black;
   line-height: $line-height-base;
 }
@@ -109,13 +109,13 @@
   padding: $space-3xl;
   color: $color-white;
   background-image:
-    linear-gradient($color-overlay-heavy, $color-overlay-heavy),
+    linear-gradient($color-overlay, $color-overlay),
     url('../src/assets/images/banners/suitcases-main-banner.png');
 }
 
 .promo__discount-title {
   margin-bottom: $space-l;
-  font-size: $font-size-4xl;
+  font-size: $font-size-h2;
   font-weight: $font-weight-black;
 }
 
@@ -141,8 +141,7 @@
 
 .travel__list {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, $card-width));
-  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
   gap: $space-2xl;
   text-align: left;
 }
@@ -189,7 +188,8 @@
 }
 
 .testimonials {
-  margin-bottom: $space-section;
+  @include section-margin;
+
   text-align: center;
 }
 
@@ -203,7 +203,7 @@
 
 .testimonials__list {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: $space-m;
 }
 
@@ -232,4 +232,104 @@
   font-size: $font-size-m;
   font-weight: $font-weight-bold;
   color: $color-primary;
+}
+
+@include media($breakpoint-desktop) {
+  .travel__list {
+    gap: $space-l;
+  }
+
+  .travel__card {
+    height: auto;
+    aspect-ratio: 1 / 2;
+  }
+
+  .travel__content {
+    right: $space-l;
+    bottom: $space-l;
+    left: $space-l;
+  }
+
+  .travel__card-text {
+    font-size: $font-size-m;
+  }
+
+  .promo__review,
+  .promo__discount {
+    padding: $space-2xl;
+  }
+}
+
+@include media($breakpoint-laptop) {
+  .hero__inner {
+    min-height: 600px;
+    padding-bottom: $promo-overlap;
+  }
+
+  .promo__title,
+  .promo__discount-title {
+    font-size: $font-size-h3;
+  }
+}
+
+@include media($breakpoint-tablet) {
+  .hero__inner {
+    display: flex;
+    flex-direction: column;
+    gap: $space-l;
+    min-height: 0;
+    padding: $space-2xl 0;
+  }
+
+  .hero__content {
+    max-width: none;
+  }
+
+  .hero__title {
+    font-size: $font-size-h3;
+  }
+
+  .hero__image {
+    align-self: center;
+    width: 70%;
+    max-width: 360px;
+  }
+
+  .promo {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    margin-top: 0;
+  }
+
+  .promo__review,
+  .promo__discount {
+    padding: $space-xl $space-l;
+  }
+
+  .promo__title,
+  .promo__discount-title {
+    font-size: $font-size-2xl;
+  }
+
+  .travel {
+    padding: $space-3xl 0;
+  }
+
+  .travel__list {
+    grid-template-columns: repeat(auto-fill, $column-width);
+    justify-content: center;
+  }
+
+  .travel__card {
+    aspect-ratio: 3 / 4;
+  }
+
+  .testimonials__list {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials__card {
+    min-height: 0;
+    padding: $space-xl $space-l;
+  }
 }

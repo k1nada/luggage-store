@@ -49,9 +49,13 @@
             <img src="../assets/icons/ui/shopping-cart.svg" alt="" class="header__action-icon" />
             <span class="header__cart-count" hidden>0</span>
           </a>
+          <label for="menu-toggle" class="header__action header__burger">
+            <img src="../assets/icons/ui/burger.svg" alt="" class="header__action-icon" />
+          </label>
         </div>
       </div>
 
+      <input type="checkbox" id="menu-toggle" class="header__menu-checkbox" hidden />
       <nav class="header__nav container">
         <ul class="header__menu">
           <li>
@@ -78,93 +82,95 @@
       </section>
 
       <section class="cart container">
-        <table class="cart__table">
-          <colgroup>
-            <col class="cart__col-image" />
-            <col class="cart__col-name" />
-            <col span="4" />
-          </colgroup>
-          <tr>
-            <th class="cart__head">Image</th>
-            <th class="cart__head">Product Name</th>
-            <th class="cart__head">Price</th>
-            <th class="cart__head">Quantity</th>
-            <th class="cart__head">Total</th>
-            <th class="cart__head">Delete</th>
-          </tr>
-          <tr class="cart__row">
-            <td class="cart__cell">
-              <img
-                src="../assets/images/my-cart/suitcase-dark-blue.png"
-                alt="Nomad Haven"
-                class="cart__image"
-              />
-            </td>
-            <td class="cart__cell cart__title">Nomad Haven</td>
-            <td class="cart__cell">$250</td>
-            <td class="cart__cell">
-              <div class="quantity">
-                <button type="button" class="quantity__button">-</button>
-                <span class="quantity__value">1</span>
-                <button type="button" class="quantity__button">+</button>
-              </div>
-            </td>
-            <td class="cart__cell">$250</td>
-            <td class="cart__cell">
-              <button type="button" class="cart__delete">
-                <img src="../assets/icons/ui/trash.svg" alt="" class="cart__delete-icon" />
-              </button>
-            </td>
-          </tr>
-          <tr class="cart__row">
-            <td class="cart__cell">
-              <img
-                src="../assets/images/my-cart/kid-suitcase.png"
-                alt="WanderWay Kid"
-                class="cart__image"
-              />
-            </td>
-            <td class="cart__cell cart__title">WanderWay Kid</td>
-            <td class="cart__cell">$690</td>
-            <td class="cart__cell">
-              <div class="quantity">
-                <button type="button" class="quantity__button">-</button>
-                <span class="quantity__value">1</span>
-                <button type="button" class="quantity__button">+</button>
-              </div>
-            </td>
-            <td class="cart__cell">$690</td>
-            <td class="cart__cell">
-              <button type="button" class="cart__delete">
-                <img src="../assets/icons/ui/trash.svg" alt="" class="cart__delete-icon" />
-              </button>
-            </td>
-          </tr>
-          <tr class="cart__row">
-            <td class="cart__cell">
-              <img
-                src="../assets/images/my-cart/set-grey.png"
-                alt="Crossroads Elite"
-                class="cart__image"
-              />
-            </td>
-            <td class="cart__cell cart__title">Crossroads Elite</td>
-            <td class="cart__cell">$1200</td>
-            <td class="cart__cell">
-              <div class="quantity">
-                <button type="button" class="quantity__button">-</button>
-                <span class="quantity__value">1</span>
-                <button type="button" class="quantity__button">+</button>
-              </div>
-            </td>
-            <td class="cart__cell">$1200</td>
-            <td class="cart__cell">
-              <button type="button" class="cart__delete">
-                <img src="../assets/icons/ui/trash.svg" alt="" class="cart__delete-icon" />
-              </button>
-            </td>
-          </tr>
-        </table>
+        <div class="cart__table-wrap">
+          <table class="cart__table">
+            <colgroup>
+              <col class="cart__col-image" />
+              <col class="cart__col-name" />
+              <col span="4" />
+            </colgroup>
+            <tr>
+              <th class="cart__head">Image</th>
+              <th class="cart__head">Product Name</th>
+              <th class="cart__head">Price</th>
+              <th class="cart__head">Quantity</th>
+              <th class="cart__head">Total</th>
+              <th class="cart__head">Delete</th>
+            </tr>
+            <tr class="cart__row">
+              <td class="cart__cell">
+                <img
+                  src="../assets/images/my-cart/suitcase-dark-blue.png"
+                  alt="Nomad Haven"
+                  class="cart__image"
+                />
+              </td>
+              <td class="cart__cell cart__title">Nomad Haven</td>
+              <td class="cart__cell">$250</td>
+              <td class="cart__cell">
+                <div class="quantity">
+                  <button type="button" class="quantity__button">-</button>
+                  <span class="quantity__value">1</span>
+                  <button type="button" class="quantity__button">+</button>
+                </div>
+              </td>
+              <td class="cart__cell">$250</td>
+              <td class="cart__cell">
+                <button type="button" class="cart__delete">
+                  <img src="../assets/icons/ui/trash.svg" alt="" class="cart__delete-icon" />
+                </button>
+              </td>
+            </tr>
+            <tr class="cart__row">
+              <td class="cart__cell">
+                <img
+                  src="../assets/images/my-cart/kid-suitcase.png"
+                  alt="WanderWay Kid"
+                  class="cart__image"
+                />
+              </td>
+              <td class="cart__cell cart__title">WanderWay Kid</td>
+              <td class="cart__cell">$690</td>
+              <td class="cart__cell">
+                <div class="quantity">
+                  <button type="button" class="quantity__button">-</button>
+                  <span class="quantity__value">1</span>
+                  <button type="button" class="quantity__button">+</button>
+                </div>
+              </td>
+              <td class="cart__cell">$690</td>
+              <td class="cart__cell">
+                <button type="button" class="cart__delete">
+                  <img src="../assets/icons/ui/trash.svg" alt="" class="cart__delete-icon" />
+                </button>
+              </td>
+            </tr>
+            <tr class="cart__row">
+              <td class="cart__cell">
+                <img
+                  src="../assets/images/my-cart/set-grey.png"
+                  alt="Crossroads Elite"
+                  class="cart__image"
+                />
+              </td>
+              <td class="cart__cell cart__title">Crossroads Elite</td>
+              <td class="cart__cell">$1200</td>
+              <td class="cart__cell">
+                <div class="quantity">
+                  <button type="button" class="quantity__button">-</button>
+                  <span class="quantity__value">1</span>
+                  <button type="button" class="quantity__button">+</button>
+                </div>
+              </td>
+              <td class="cart__cell">$1200</td>
+              <td class="cart__cell">
+                <button type="button" class="cart__delete">
+                  <img src="../assets/icons/ui/trash.svg" alt="" class="cart__delete-icon" />
+                </button>
+              </td>
+            </tr>
+          </table>
+        </div>
 
         <div class="cart__bottom">
           <div class="cart__actions">

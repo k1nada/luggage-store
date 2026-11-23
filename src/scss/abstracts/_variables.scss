@@ -7,9 +7,8 @@ $color-border: #e5e5e5;
 $color-background-light: #e8e9eb;
 $color-text-muted: #5c5c5c;
 $color-primary-light: rgb(185 39 112 / 60%);
+$color-overlay: rgb(0 0 0 / 40%);
 $color-overlay-light: rgb(0 0 0 / 10%);
-$color-overlay-medium: rgb(0 0 0 / 30%);
-$color-overlay-strong: rgb(0 0 0 / 40%);
 $color-overlay-heavy: rgb(0 0 0 / 50%);
 $shadow-card: 0 12px 40px rgb(0 0 0 / 18%);
 
@@ -27,9 +26,9 @@ $font-size-m: 16px;
 $font-size-l: 18px;
 $font-size-xl: 20px;
 $font-size-2xl: 24px;
-$font-size-3xl: 32px;
-$font-size-4xl: 40px;
-$font-size-5xl: 48px;
+$font-size-h3: 32px;
+$font-size-h2: 40px;
+$font-size-h1: 48px;
 $font-size-display: 220px;
 
 // lines
@@ -55,7 +54,7 @@ $space-section: 120px;
 // layout
 $container-width: 1300px;
 $page-side-padding: 20px;
-$card-width: 300px;
+$column-width: 260px;
 $button-min-width: 200px;
 $promo-overlap: 100px;
 $border-width: 1px;
@@ -64,3 +63,8 @@ $border-width-thick: 3px;
 $border-radius: 4px;
 $z-index-content: 1;
 $z-index-header: 100;
+
+// breakpoints
+$breakpoint-desktop: 1440px;
+$breakpoint-laptop: 1024px;
+$breakpoint-tablet: 768px;

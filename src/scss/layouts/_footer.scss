@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 .footer {
   font-family: $font-secondary;
@@ -18,7 +19,7 @@
 .footer__columns {
   grid-area: columns;
   display: grid;
-  grid-template-columns: minmax(0, 230px) minmax(0, 260px) auto;
+  grid-template-columns: 230px 260px auto;
 }
 
 .footer__title {
@@ -113,4 +114,48 @@
   max-width: 200px;
   font-size: $font-size-m;
   line-height: $line-height-relaxed;
+}
+
+@include media($breakpoint-desktop) {
+  .footer__columns {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@include media($breakpoint-laptop) {
+  .benefits__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include media($breakpoint-tablet) {
+  .footer__main {
+    grid-template-areas:
+      'columns'
+      'about'
+      'shipping'
+      'contacts';
+    grid-template-columns: 1fr;
+    gap: $space-2xl;
+    padding: $space-3xl 0;
+  }
+
+  .footer__columns {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $space-l;
+  }
+
+  .footer__contacts {
+    align-self: start;
+  }
+
+  .footer__contacts-list {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits__list {
+    grid-template-columns: repeat(auto-fill, $column-width);
+    justify-content: center;
+  }
 }

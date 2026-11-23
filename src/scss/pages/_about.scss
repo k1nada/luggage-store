@@ -3,10 +3,11 @@
 @use '../abstracts/placeholders';
 
 .new-arrivals {
+  @include section-margin;
+
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 620px);
+  grid-template-columns: 1fr 620px;
   gap: $space-xl;
-  margin-bottom: $space-section;
 }
 
 .new-arrivals__title {
@@ -36,7 +37,8 @@
 }
 
 .team {
-  margin-bottom: $space-section;
+  @include section-margin;
+
   text-align: center;
 }
 
@@ -50,7 +52,7 @@
 
 .team__list {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: $space-xl;
 }
 
@@ -71,4 +73,25 @@
 
 .team__role {
   font-size: $font-size-m;
+}
+
+@include media($breakpoint-desktop) {
+  .new-arrivals {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include media($breakpoint-tablet) {
+  .new-arrivals {
+    grid-template-columns: 1fr;
+  }
+
+  .new-arrivals__image {
+    height: 260px;
+  }
+
+  .team__list {
+    grid-template-columns: repeat(auto-fill, 200px);
+    justify-content: center;
+  }
 }

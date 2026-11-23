@@ -12,7 +12,7 @@
 .quantity__button {
   @extend %reset-button;
 
-  font-size: $font-size-3xl;
+  font-size: $font-size-h3;
   font-weight: $font-weight-bold;
 }
 
@@ -34,7 +34,7 @@
   flex-shrink: 0;
   gap: 0;
   width: 130px;
-  height: $space-3xl;
+  height: 60px;
   padding: 0 $space-s;
   border: $border-width-thick solid $color-primary;
 

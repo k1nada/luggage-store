@@ -49,9 +49,13 @@
             <img src="../assets/icons/ui/shopping-cart.svg" alt="" class="header__action-icon" />
             <span class="header__cart-count" hidden>0</span>
           </a>
+          <label for="menu-toggle" class="header__action header__burger">
+            <img src="../assets/icons/ui/burger.svg" alt="" class="header__action-icon" />
+          </label>
         </div>
       </div>
 
+      <input type="checkbox" id="menu-toggle" class="header__menu-checkbox" hidden />
       <nav class="header__nav container">
         <ul class="header__menu">
           <li>
@@ -237,7 +241,7 @@
           </p>
         </div>
 
-        <div class="product-tabs__content product-reviews" hidden>
+        <div class="product-tabs__content product-tabs__content--hidden product-reviews">
           <div class="product-reviews__list">
             <h2 class="product-reviews__title">
               1 review for Global Explorer Max Comfort Suitcase Pro

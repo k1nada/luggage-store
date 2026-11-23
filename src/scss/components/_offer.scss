@@ -1,7 +1,9 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 @use '../abstracts/placeholders';
 
 .offer {
+  @include section-margin;
   @extend %background-cover;
 
   display: grid;
@@ -9,12 +11,10 @@
   gap: $space-2xl;
   align-items: center;
   min-height: 410px;
-  margin-bottom: $space-section;
   padding: $space-2xl $space-4xl $space-2xl $space-section;
   color: $color-white;
   background-image:
-    linear-gradient($color-overlay-medium, $color-overlay-medium),
-    url('../src/assets/images/banners/overlay.png');
+    linear-gradient($color-overlay, $color-overlay), url('../src/assets/images/banners/overlay.png');
   box-shadow: $shadow-card;
 }
 
@@ -33,7 +33,7 @@
 
 .offer__title {
   margin-bottom: $space-xl;
-  font-size: $font-size-4xl;
+  font-size: $font-size-h2;
   font-weight: $font-weight-black;
 }
 
@@ -52,4 +52,39 @@
 
 .offer__button {
   min-width: $button-min-width;
+}
+
+@include media($breakpoint-desktop) {
+  .offer {
+    grid-template-columns: 1fr 1fr;
+    padding: $space-2xl;
+  }
+}
+
+@include media($breakpoint-laptop) {
+  .offer__title {
+    font-size: $font-size-h3;
+  }
+}
+
+@include media($breakpoint-tablet) {
+  .offer {
+    grid-template-columns: 1fr;
+    gap: $space-l;
+    min-height: 0;
+    padding: $space-l;
+  }
+
+  .offer__percent {
+    font-size: 100px;
+  }
+
+  .offer__note {
+    padding-left: 0;
+  }
+
+  .offer__title {
+    margin-bottom: $space-m;
+    font-size: $font-size-2xl;
+  }
 }

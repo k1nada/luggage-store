@@ -4,7 +4,7 @@
 
 .product-details {
   display: grid;
-  grid-template-columns: minmax(0, 650px) minmax(0, 1fr);
+  grid-template-columns: 650px 1fr;
   gap: $space-2xl;
   padding-top: $space-3xl;
   margin-bottom: $space-3xl;
@@ -20,7 +20,7 @@
 
 .product-details__thumbs {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: $space-xs;
 }
 
@@ -32,7 +32,7 @@
 }
 
 .product-details__title {
-  font-size: $font-size-3xl;
+  font-size: $font-size-h3;
   font-weight: $font-weight-bold;
   line-height: $line-height-base;
 }
@@ -127,7 +127,7 @@
 }
 
 .product-details__payment-circle {
-  @include square($space-m);
+  @include square(20px);
 
   background: $color-text-muted;
   border-radius: 50%;
@@ -139,7 +139,7 @@
 }
 
 .product-tabs {
-  margin-bottom: $space-section;
+  @include section-margin;
 }
 
 .product-tabs__list {
@@ -171,21 +171,21 @@
   color: $color-text-muted;
 }
 
+.product-tabs__content--hidden {
+  display: none;
+}
+
 .related__title {
   @extend %title-underline;
 
   padding-bottom: $space-3xs;
   margin-bottom: $space-3xl;
-  font-size: $font-size-3xl;
+  font-size: $font-size-h3;
   font-weight: $font-weight-bold;
 }
 
-.product-tabs__content[hidden] {
-  display: none;
-}
-
 .product-reviews {
-  grid-template-columns: minmax(0, 560px) minmax(0, 610px);
+  grid-template-columns: 560px 610px;
   justify-content: space-between;
   gap: $space-3xl;
   color: $color-black;
@@ -274,7 +274,7 @@
 .review-form__star {
   @extend %reset-button;
 
-  width: $space-m;
+  width: 20px;
 }
 
 .review-form__textarea {
@@ -283,10 +283,95 @@
 
 .review-form__row {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: $space-m;
 }
 
 .review-form__submit {
   justify-self: start;
+}
+
+@include media($breakpoint-desktop) {
+  .product-reviews {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .product-details {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-details__image {
+    height: auto;
+    aspect-ratio: 3 / 4;
+  }
+
+  .product-details__payment {
+    flex-wrap: wrap;
+    gap: $space-s;
+  }
+
+  .product-details__payment-list {
+    flex-wrap: wrap;
+    gap: $space-m;
+  }
+}
+
+@include media($breakpoint-laptop) {
+  .product-tabs__list {
+    gap: $space-3xl;
+  }
+}
+
+@include media($breakpoint-tablet) {
+  .product-details {
+    grid-template-columns: 1fr;
+    padding-top: $space-xl;
+  }
+
+  .product-details__image {
+    aspect-ratio: 1;
+  }
+
+  .product-details__thumb {
+    height: auto;
+    aspect-ratio: 1;
+  }
+
+  .product-details__title {
+    font-size: $font-size-2xl;
+  }
+
+  .product-details__actions {
+    flex-wrap: wrap;
+  }
+
+  .product-tabs__list {
+    flex-wrap: wrap;
+    gap: $space-s;
+  }
+
+  .product-tabs__button {
+    font-size: $font-size-s;
+  }
+
+  .product-reviews {
+    grid-template-columns: 1fr;
+  }
+
+  .product-reviews__list {
+    gap: $space-2xl;
+  }
+
+  .review {
+    gap: $space-s;
+  }
+
+  .review__header {
+    flex-wrap: wrap;
+    gap: $space-2xs $space-s;
+  }
+
+  .review-form__row {
+    grid-template-columns: 1fr;
+  }
 }

@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 @use '../abstracts/placeholders';
 
 .modal {
@@ -10,7 +11,7 @@
   border: none;
 
   &::backdrop {
-    background: $color-overlay-heavy;
+    background: $color-overlay;
   }
 }
 
@@ -43,7 +44,7 @@
   position: absolute;
   top: 50%;
   right: $space-xs;
-  width: $space-m;
+  width: 20px;
   transform: translate(0, -50%);
 }
 
@@ -63,4 +64,10 @@
 
 .login__submit {
   width: 100%;
+}
+
+@include media($breakpoint-tablet) {
+  .login {
+    padding: $space-l;
+  }
 }

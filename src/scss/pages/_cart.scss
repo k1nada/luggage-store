@@ -3,7 +3,11 @@
 @use '../abstracts/placeholders';
 
 .cart {
-  margin-bottom: $space-section;
+  @include section-margin;
+}
+
+.cart__table-wrap {
+  overflow-x: auto;
 }
 
 .cart__table {
@@ -94,4 +98,43 @@
   min-width: 230px;
   margin-top: $space-xl;
   padding: $space-2xs $space-l;
+}
+
+@include media($breakpoint-desktop) {
+  .cart__bottom {
+    grid-template-columns: 1fr 1fr;
+    gap: $space-2xl;
+  }
+
+  .cart__actions {
+    flex-wrap: wrap;
+  }
+}
+
+@include media($breakpoint-tablet) {
+  .cart__table {
+    min-width: 600px;
+  }
+
+  .cart__col-image {
+    width: 100px;
+  }
+
+  .cart__col-name {
+    width: 180px;
+  }
+
+  .cart__bottom {
+    grid-template-columns: 1fr;
+    gap: $space-xl;
+  }
+
+  .cart-summary {
+    padding: $space-l;
+  }
+
+  .cart-summary__checkout {
+    width: 100%;
+    min-width: 0;
+  }
 }

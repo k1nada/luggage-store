@@ -1,10 +1,12 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 .feedback {
+  @include section-margin;
+
   display: grid;
-  grid-template-columns: minmax(0, 630px) minmax(0, 1fr);
+  grid-template-columns: 630px 1fr;
   gap: $space-2xl;
-  margin-bottom: $space-section;
 }
 
 .feedback__image {
@@ -31,9 +33,29 @@
 }
 
 .feedback__message {
-  height: $space-section;
+  height: 120px;
 }
 
 .feedback__submit {
   justify-self: start;
+}
+
+@include media($breakpoint-desktop) {
+  .feedback {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .feedback__image {
+    height: 600px;
+  }
+}
+
+@include media($breakpoint-tablet) {
+  .feedback {
+    grid-template-columns: 1fr;
+  }
+
+  .feedback__image {
+    height: 300px;
+  }
 }

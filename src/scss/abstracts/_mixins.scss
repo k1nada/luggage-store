@@ -1,10 +1,32 @@
 @use 'variables' as *;
 
+@mixin media($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin section-margin {
+  margin-bottom: $space-section;
+
+  @include media($breakpoint-tablet) {
+    margin-bottom: $space-3xl;
+  }
+}
+
 @mixin section-title {
   margin-bottom: $space-xs;
-  font-size: $font-size-4xl;
+  font-size: $font-size-h2;
   font-weight: $font-weight-black;
   line-height: $line-height-tight;
+
+  @include media($breakpoint-laptop) {
+    font-size: $font-size-h3;
+  }
+
+  @include media($breakpoint-tablet) {
+    font-size: $font-size-2xl;
+  }
 }
 
 @mixin section-subtitle {
@@ -12,6 +34,11 @@
   font-size: $font-size-l;
   line-height: $line-height-none;
   color: $color-dark;
+
+  @include media($breakpoint-tablet) {
+    margin-bottom: $space-xl;
+    font-size: $font-size-m;
+  }
 }
 
 @mixin cover-image {
@@ -39,6 +66,6 @@
   align-items: center;
 }
 
-@mixin hero-image($url, $overlay: $color-overlay-medium) {
+@mixin hero-image($url, $overlay: $color-overlay) {
   background-image: linear-gradient($overlay, $overlay), url($url);
 }

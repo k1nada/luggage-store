@@ -3,12 +3,12 @@
 @use '../abstracts/placeholders';
 
 .page-hero {
+  @include section-margin;
   @extend %background-cover;
 
   display: grid;
   align-items: center;
   min-height: 550px;
-  margin-bottom: $space-section;
   text-align: center;
   color: $color-white;
   background-color: $color-dark;
@@ -19,18 +19,18 @@
 }
 
 .page-hero--contact {
-  @include hero-image('../src/assets/images/contact-us/banner.jpg', $color-overlay-strong);
+  @include hero-image('../src/assets/images/contact-us/banner.jpg');
 }
 
 .page-hero--cart {
-  @include hero-image('../src/assets/images/my-cart/banner.jpg', $color-overlay-strong);
+  @include hero-image('../src/assets/images/my-cart/banner.jpg');
 
   min-height: 230px;
   margin-bottom: $space-3xl;
 }
 
 .page-hero__title {
-  font-size: $font-size-5xl;
+  font-size: $font-size-h1;
   font-weight: $font-weight-bold;
   line-height: $line-height-tight;
 }
@@ -40,4 +40,18 @@
   margin: $space-m auto 0;
   font-size: $font-size-m;
   line-height: $line-height-relaxed;
+}
+
+@include media($breakpoint-tablet) {
+  .page-hero {
+    min-height: 300px;
+  }
+
+  .page-hero--cart {
+    min-height: 160px;
+  }
+
+  .page-hero__title {
+    font-size: $font-size-h3;
+  }
 }
