@@ -14,7 +14,7 @@
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   min-height: 130px;
-  border-bottom: $border-width solid $color-border;
+  border-bottom: 1px solid $color-border;
 }
 
 .header__socials {
@@ -78,7 +78,7 @@
   display: flex;
   justify-content: center;
   gap: $space-xl;
-  padding: 28px 0;
+  padding: $header-menu-padding 0;
 }
 
 .header__menu-link {
@@ -88,6 +88,16 @@
 
 .header__menu-link--active {
   color: $color-primary;
+}
+
+.header__menu-link--arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-3xs;
+}
+
+.header__menu-link--arrow::after {
+  content: url('../src/assets/icons/ui/arrow-down.svg');
 }
 
 .header__cart-link {

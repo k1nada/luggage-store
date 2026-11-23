@@ -42,12 +42,12 @@
         </a>
 
         <div class="header__actions">
-          <button type="button" class="header__action">
+          <button type="button" class="header__action header__account">
             <img src="../assets/icons/ui/user.svg" alt="" class="header__action-icon" />
           </button>
           <a href="cart.html" class="header__action header__cart-link">
             <img src="../assets/icons/ui/shopping-cart.svg" alt="" class="header__action-icon" />
-            <span class="header__cart-count" hidden>0</span>
+            <span class="header__cart-count" hidden></span>
           </a>
           <label for="menu-toggle" class="header__action header__burger">
             <img src="../assets/icons/ui/burger.svg" alt="" class="header__action-icon" />
@@ -62,7 +62,9 @@
             <a href="../index.html" class="link header__menu-link">Home</a>
           </li>
           <li>
-            <a href="catalog.html" class="link header__menu-link">Catalog</a>
+            <a href="catalog.html" class="link header__menu-link header__menu-link--arrow"
+              >Catalog</a
+            >
           </li>
           <li>
             <a href="about.html" class="link header__menu-link">About Us</a>
@@ -126,53 +128,62 @@
         <div class="feedback__content">
           <h2 class="feedback__title">Your Feedback Is Much Appreciated!</h2>
           <p class="feedback__text">We will contact you when you complete the following form!</p>
-          <form class="form">
+          <form class="form" id="contactForm" novalidate>
             <div class="form__field">
-              <label for="name" class="form__label"
+              <label for="contactName" class="form__label"
                 >Your Name <span class="form__required">*</span></label
               >
               <input
                 type="text"
-                id="name"
+                id="contactName"
                 name="name"
                 class="input input--accent feedback__input"
+                required
               />
+              <span class="form__error" id="contactNameError"></span>
             </div>
             <div class="form__field">
-              <label for="email" class="form__label"
+              <label for="contactEmail" class="form__label"
                 >Your Email Address <span class="form__required">*</span></label
               >
               <input
                 type="email"
-                id="email"
+                id="contactEmail"
                 name="email"
                 class="input input--accent feedback__input"
+                required
               />
+              <span class="form__error" id="contactEmailError"></span>
             </div>
             <div class="form__field">
-              <label for="topic" class="form__label"
+              <label for="contactTopic" class="form__label"
                 >Topic <span class="form__required">*</span></label
               >
               <input
                 type="text"
-                id="topic"
+                id="contactTopic"
                 name="topic"
                 class="input input--accent feedback__input"
+                required
               />
+              <span class="form__error" id="contactTopicError"></span>
             </div>
             <div class="form__field">
-              <label for="message" class="form__label"
+              <label for="contactMessage" class="form__label"
                 >Your Message <span class="form__required">*</span></label
               >
               <textarea
-                id="message"
+                id="contactMessage"
                 name="message"
                 class="input input--accent input--textarea feedback__message"
+                required
               ></textarea>
+              <span class="form__error" id="contactMessageError"></span>
             </div>
             <button type="submit" class="button button--primary button--compact feedback__submit">
               Send
             </button>
+            <p class="form__status" id="contactStatus"></p>
           </form>
         </div>
       </section>
@@ -282,25 +293,38 @@
     </footer>
 
     <dialog class="modal">
-      <form method="dialog" class="login">
+      <form method="dialog" class="login" novalidate>
         <label class="form__field">
           <span class="login__label">Email address <span class="form__required">*</span></span>
-          <input type="email" name="email" class="input input--accent login__input" required />
+          <input
+            type="email"
+            id="loginEmail"
+            name="email"
+            class="input input--accent login__input"
+            autocomplete="email"
+            required
+          />
+          <span class="form__error login__error" id="loginEmailError"></span>
         </label>
-        <label class="form__field">
-          <span class="login__label">Password <span class="form__required">*</span></span>
-          <span class="login__password">
+        <div class="form__field">
+          <label for="loginPassword" class="login__label"
+            >Password <span class="form__required">*</span></label
+          >
+          <div class="login__password">
             <input
               type="password"
+              id="loginPassword"
               name="password"
               class="input input--accent login__input"
+              autocomplete="current-password"
               required
             />
             <button type="button" class="login__toggle">
               <img src="../assets/icons/ui/eye.svg" alt="" />
             </button>
-          </span>
-        </label>
+          </div>
+          <span class="form__error login__error" id="loginPasswordError"></span>
+        </div>
         <div class="login__options">
           <label class="checkbox login__remember">
             <input type="checkbox" name="remember" class="checkbox__input" />
@@ -313,5 +337,7 @@
         </button>
       </form>
     </dialog>
+    <script type="module" src="../../dist/js/main.js"></script>
+    <script type="module" src="../../dist/js/contact.js"></script>
   </body>
 </html>

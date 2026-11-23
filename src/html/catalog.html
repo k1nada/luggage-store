@@ -42,12 +42,12 @@
         </a>
 
         <div class="header__actions">
-          <button type="button" class="header__action">
+          <button type="button" class="header__action header__account">
             <img src="../assets/icons/ui/user.svg" alt="" class="header__action-icon" />
           </button>
           <a href="cart.html" class="header__action header__cart-link">
             <img src="../assets/icons/ui/shopping-cart.svg" alt="" class="header__action-icon" />
-            <span class="header__cart-count" hidden>0</span>
+            <span class="header__cart-count" hidden></span>
           </a>
           <label for="menu-toggle" class="header__action header__burger">
             <img src="../assets/icons/ui/burger.svg" alt="" class="header__action-icon" />
@@ -62,7 +62,9 @@
             <a href="../index.html" class="link header__menu-link">Home</a>
           </li>
           <li>
-            <a href="catalog.html" class="link header__menu-link header__menu-link--active"
+            <a
+              href="catalog.html"
+              class="link header__menu-link header__menu-link--active header__menu-link--arrow"
               >Catalog</a
             >
           </li>
@@ -80,17 +82,210 @@
       <h1 class="visually-hidden">Catalog</h1>
       <form class="filters container">
         <div class="filters__row">
-          <div class="form__field filters__item">
+          <div class="form__field filters__item filters__dropdown">
             <span class="form__label filters__label">Size</span>
             <button type="button" class="select select--bold filters__toggle">Choose option</button>
+            <ul class="filters__options">
+              <li>
+                <label class="filters__option">
+                  <input
+                    type="radio"
+                    name="size"
+                    value="S"
+                    class="visually-hidden filters__radio"
+                  />
+                  <span class="filters__option-text">S</span>
+                </label>
+              </li>
+              <li>
+                <label class="filters__option">
+                  <input
+                    type="radio"
+                    name="size"
+                    value="M"
+                    class="visually-hidden filters__radio"
+                  />
+                  <span class="filters__option-text">M</span>
+                </label>
+              </li>
+              <li>
+                <label class="filters__option">
+                  <input
+                    type="radio"
+                    name="size"
+                    value="L"
+                    class="visually-hidden filters__radio"
+                  />
+                  <span class="filters__option-text">L</span>
+                </label>
+              </li>
+              <li>
+                <label class="filters__option">
+                  <input
+                    type="radio"
+                    name="size"
+                    value="XL"
+                    class="visually-hidden filters__radio"
+                  />
+                  <span class="filters__option-text">XL</span>
+                </label>
+              </li>
+              <li>
+                <label class="filters__option">
+                  <input
+                    type="radio"
+                    name="size"
+                    value="S-L"
+                    class="visually-hidden filters__radio"
+                  />
+                  <span class="filters__option-text">S-L</span>
+                </label>
+              </li>
+              <li>
+                <label class="filters__option">
+                  <input
+                    type="radio"
+                    name="size"
+                    value="S, M, XL"
+                    class="visually-hidden filters__radio"
+                  />
+                  <span class="filters__option-text">S, M, XL</span>
+                </label>
+              </li>
+            </ul>
           </div>
-          <div class="form__field filters__item">
+          <div class="form__field filters__item filters__dropdown">
             <span class="form__label filters__label">Color</span>
             <button type="button" class="select select--bold filters__toggle">Choose option</button>
+            <ul class="filters__options">
+              <li>
+                <label class="filters__option">
+                  <input
+                    type="radio"
+                    name="color"
+                    value="red"
+                    class="visually-hidden filters__radio"
+                  />
+                  <span class="filters__option-text">Red</span>
+                </label>
+              </li>
+              <li>
+                <label class="filters__option">
+                  <input
+                    type="radio"
+                    name="color"
+                    value="blue"
+                    class="visually-hidden filters__radio"
+                  />
+                  <span class="filters__option-text">Blue</span>
+                </label>
+              </li>
+              <li>
+                <label class="filters__option">
+                  <input
+                    type="radio"
+                    name="color"
+                    value="green"
+                    class="visually-hidden filters__radio"
+                  />
+                  <span class="filters__option-text">Green</span>
+                </label>
+              </li>
+              <li>
+                <label class="filters__option">
+                  <input
+                    type="radio"
+                    name="color"
+                    value="black"
+                    class="visually-hidden filters__radio"
+                  />
+                  <span class="filters__option-text">Black</span>
+                </label>
+              </li>
+              <li>
+                <label class="filters__option">
+                  <input
+                    type="radio"
+                    name="color"
+                    value="grey"
+                    class="visually-hidden filters__radio"
+                  />
+                  <span class="filters__option-text">Grey</span>
+                </label>
+              </li>
+              <li>
+                <label class="filters__option">
+                  <input
+                    type="radio"
+                    name="color"
+                    value="yellow"
+                    class="visually-hidden filters__radio"
+                  />
+                  <span class="filters__option-text">Yellow</span>
+                </label>
+              </li>
+              <li>
+                <label class="filters__option">
+                  <input
+                    type="radio"
+                    name="color"
+                    value="pink"
+                    class="visually-hidden filters__radio"
+                  />
+                  <span class="filters__option-text">Pink</span>
+                </label>
+              </li>
+            </ul>
           </div>
-          <div class="form__field filters__item">
+          <div class="form__field filters__item filters__dropdown">
             <span class="form__label filters__label">Category</span>
             <button type="button" class="select select--bold filters__toggle">Choose option</button>
+            <ul class="filters__options">
+              <li>
+                <label class="filters__option">
+                  <input
+                    type="radio"
+                    name="category"
+                    value="carry-ons"
+                    class="visually-hidden filters__radio"
+                  />
+                  <span class="filters__option-text">Carry-ons</span>
+                </label>
+              </li>
+              <li>
+                <label class="filters__option">
+                  <input
+                    type="radio"
+                    name="category"
+                    value="suitcases"
+                    class="visually-hidden filters__radio"
+                  />
+                  <span class="filters__option-text">Suitcases</span>
+                </label>
+              </li>
+              <li>
+                <label class="filters__option">
+                  <input
+                    type="radio"
+                    name="category"
+                    value="luggage sets"
+                    class="visually-hidden filters__radio"
+                  />
+                  <span class="filters__option-text">Luggage sets</span>
+                </label>
+              </li>
+              <li>
+                <label class="filters__option">
+                  <input
+                    type="radio"
+                    name="category"
+                    value="kids' luggage"
+                    class="visually-hidden filters__radio"
+                  />
+                  <span class="filters__option-text">Kids' luggage</span>
+                </label>
+              </li>
+            </ul>
           </div>
           <label class="form__field filters__item">
             <span class="form__label filters__label">Sales</span>
@@ -101,7 +296,10 @@
           <button type="reset" class="button button--primary button--uppercase filters__button">
             Clear Filters
           </button>
-          <button type="button" class="button button--primary button--uppercase filters__button">
+          <button
+            type="button"
+            class="button button--primary button--uppercase filters__button filters__hide"
+          >
             Hide Filters
           </button>
         </div>
@@ -110,264 +308,19 @@
       <section class="catalog container">
         <div class="catalog__content">
           <div class="catalog__toolbar">
-            <p class="catalog__results">Showing 1-12 Of 15 Results</p>
+            <p class="catalog__results"></p>
             <div class="catalog__sort">
               <select class="select catalog__sort-select" name="sort">
                 <option value="default">Default Sorting</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="popularity">Sort by Popularity</option>
+                <option value="rating">Sort by Rating</option>
               </select>
             </div>
           </div>
-          <ul class="catalog__list">
-            <li>
-              <article class="product-card">
-                <a href="product.html" class="product-card__image-wrap">
-                  <span class="product-card__badge">Sale</span>
-                  <img
-                    src="../assets/images/catalog/suitcase-green.png"
-                    alt="green suitcase"
-                    class="product-card__image"
-                  />
-                </a>
-                <h2 class="product-card__title">Vel vestibulum elit tuvel euqen.</h2>
-                <p class="product-card__price">$250</p>
-                <button
-                  type="button"
-                  class="button button--primary button--small product-card__button"
-                >
-                  Add To Cart
-                </button>
-              </article>
-            </li>
-            <li>
-              <article class="product-card">
-                <a href="product.html" class="product-card__image-wrap">
-                  <span class="product-card__badge">Sale</span>
-                  <img
-                    src="../assets/images/catalog/suitcase-blue.png"
-                    alt="blue suitcase"
-                    class="product-card__image"
-                  />
-                </a>
-                <h2 class="product-card__title">Vel vestibulum elit tuvel euqen.</h2>
-                <p class="product-card__price">$250</p>
-                <button
-                  type="button"
-                  class="button button--primary button--small product-card__button"
-                >
-                  Add To Cart
-                </button>
-              </article>
-            </li>
-            <li>
-              <article class="product-card">
-                <a href="product.html" class="product-card__image-wrap">
-                  <span class="product-card__badge">Sale</span>
-                  <img
-                    src="../assets/images/catalog/suitcase-grey.png"
-                    alt="grey suitcase"
-                    class="product-card__image"
-                  />
-                </a>
-                <h2 class="product-card__title">Vel vestibulum elit tuvel euqen.</h2>
-                <p class="product-card__price">$250</p>
-                <button
-                  type="button"
-                  class="button button--primary button--small product-card__button"
-                >
-                  Add To Cart
-                </button>
-              </article>
-            </li>
-            <li>
-              <article class="product-card">
-                <a href="product.html" class="product-card__image-wrap">
-                  <span class="product-card__badge">Sale</span>
-                  <img
-                    src="../assets/images/catalog/suitcase-orange.png"
-                    alt="orange suitcase"
-                    class="product-card__image"
-                  />
-                </a>
-                <h2 class="product-card__title">Vel vestibulum elit tuvel euqen.</h2>
-                <p class="product-card__price">$250</p>
-                <button
-                  type="button"
-                  class="button button--primary button--small product-card__button"
-                >
-                  Add To Cart
-                </button>
-              </article>
-            </li>
-            <li>
-              <article class="product-card">
-                <a href="product.html" class="product-card__image-wrap">
-                  <span class="product-card__badge">Sale</span>
-                  <img
-                    src="../assets/images/catalog/suitcase-yellow.png"
-                    alt="yellow suitcase"
-                    class="product-card__image"
-                  />
-                </a>
-                <h2 class="product-card__title">Vel vestibulum elit tuvel euqen.</h2>
-                <p class="product-card__price">$250</p>
-                <button
-                  type="button"
-                  class="button button--primary button--small product-card__button"
-                >
-                  Add To Cart
-                </button>
-              </article>
-            </li>
-            <li>
-              <article class="product-card">
-                <a href="product.html" class="product-card__image-wrap">
-                  <span class="product-card__badge">Sale</span>
-                  <img
-                    src="../assets/images/catalog/suitcase-red.png"
-                    alt="red suitcase"
-                    class="product-card__image"
-                  />
-                </a>
-                <h2 class="product-card__title">Vel vestibulum elit tuvel euqen.</h2>
-                <p class="product-card__price">$250</p>
-                <button
-                  type="button"
-                  class="button button--primary button--small product-card__button"
-                >
-                  Add To Cart
-                </button>
-              </article>
-            </li>
-            <li>
-              <article class="product-card">
-                <a href="product.html" class="product-card__image-wrap">
-                  <span class="product-card__badge">Sale</span>
-                  <img
-                    src="../assets/images/catalog/suitcase-black.png"
-                    alt="black suitcase"
-                    class="product-card__image"
-                  />
-                </a>
-                <h2 class="product-card__title">Vel vestibulum elit tuvel euqen.</h2>
-                <p class="product-card__price">$250</p>
-                <button
-                  type="button"
-                  class="button button--primary button--small product-card__button"
-                >
-                  Add To Cart
-                </button>
-              </article>
-            </li>
-            <li>
-              <article class="product-card">
-                <a href="product.html" class="product-card__image-wrap">
-                  <span class="product-card__badge">Sale</span>
-                  <img
-                    src="../assets/images/catalog/suitcase-brown.png"
-                    alt="brown suitcase"
-                    class="product-card__image"
-                  />
-                </a>
-                <h2 class="product-card__title">Vel vestibulum elit tuvel euqen.</h2>
-                <p class="product-card__price">$250</p>
-                <button
-                  type="button"
-                  class="button button--primary button--small product-card__button"
-                >
-                  Add To Cart
-                </button>
-              </article>
-            </li>
-            <li>
-              <article class="product-card">
-                <a href="product.html" class="product-card__image-wrap">
-                  <span class="product-card__badge">Sale</span>
-                  <img
-                    src="../assets/images/catalog/kid-suitcase-1.png"
-                    alt="kid suitcase"
-                    class="product-card__image"
-                  />
-                </a>
-                <h2 class="product-card__title">Vel vestibulum elit tuvel euqen.</h2>
-                <p class="product-card__price">$250</p>
-                <button
-                  type="button"
-                  class="button button--primary button--small product-card__button"
-                >
-                  Add To Cart
-                </button>
-              </article>
-            </li>
-            <li>
-              <article class="product-card">
-                <a href="product.html" class="product-card__image-wrap">
-                  <span class="product-card__badge">Sale</span>
-                  <img
-                    src="../assets/images/catalog/kid-suitcase-2.png"
-                    alt="kid suitcase"
-                    class="product-card__image"
-                  />
-                </a>
-                <h2 class="product-card__title">Vel vestibulum elit tuvel euqen.</h2>
-                <p class="product-card__price">$250</p>
-                <button
-                  type="button"
-                  class="button button--primary button--small product-card__button"
-                >
-                  Add To Cart
-                </button>
-              </article>
-            </li>
-            <li>
-              <article class="product-card">
-                <a href="product.html" class="product-card__image-wrap">
-                  <span class="product-card__badge">Sale</span>
-                  <img
-                    src="../assets/images/catalog/kid-suitcase-3.png"
-                    alt="kid suitcase"
-                    class="product-card__image"
-                  />
-                </a>
-                <h2 class="product-card__title">Vel vestibulum elit tuvel euqen.</h2>
-                <p class="product-card__price">$250</p>
-                <button
-                  type="button"
-                  class="button button--primary button--small product-card__button"
-                >
-                  Add To Cart
-                </button>
-              </article>
-            </li>
-            <li>
-              <article class="product-card">
-                <a href="product.html" class="product-card__image-wrap">
-                  <span class="product-card__badge">Sale</span>
-                  <img
-                    src="../assets/images/catalog/kid-suitcase-4.png"
-                    alt="kid suitcase"
-                    class="product-card__image"
-                  />
-                </a>
-                <h2 class="product-card__title">Vel vestibulum elit tuvel euqen.</h2>
-                <p class="product-card__price">$250</p>
-                <button
-                  type="button"
-                  class="button button--primary button--small product-card__button"
-                >
-                  Add To Cart
-                </button>
-              </article>
-            </li>
-          </ul>
-          <nav class="pagination">
-            <ul class="pagination__list">
-              <li>
-                <a href="#" class="pagination__link pagination__link--active">1</a>
-              </li>
-              <li><a href="#" class="pagination__link">2</a></li>
-            </ul>
-            <a href="#" class="pagination__next">Next</a>
-          </nav>
+          <ul class="catalog__list"></ul>
+          <nav class="pagination"></nav>
         </div>
 
         <aside class="catalog__sidebar">
@@ -383,132 +336,7 @@
             </button>
           </form>
           <h2 class="catalog__sidebar-title">Top Best Sets</h2>
-          <ul class="best-sets">
-            <li class="best-set">
-              <img
-                src="../assets/images/best-sets/set-red.png"
-                alt="red suitcase set"
-                class="best-set__image"
-              />
-              <div class="best-set__content">
-                <h3 class="best-set__title">
-                  <a href="product.html">Primis in faucibus aenean laoreet rhoncus ipsum eget.</a>
-                </h3>
-                <p class="rating rating--small">
-                  <img src="../assets/icons/ui/star.svg" alt="" class="rating__star" /><img
-                    src="../assets/icons/ui/star.svg"
-                    alt=""
-                    class="rating__star"
-                  /><img src="../assets/icons/ui/star.svg" alt="" class="rating__star" /><img
-                    src="../assets/icons/ui/star.svg"
-                    alt=""
-                    class="rating__star"
-                  /><img src="../assets/icons/ui/star.svg" alt="" class="rating__star" />
-                </p>
-                <p class="best-set__price">$1000</p>
-              </div>
-            </li>
-            <li class="best-set">
-              <img
-                src="../assets/images/best-sets/set-black.png"
-                alt="black suitcase set"
-                class="best-set__image"
-              />
-              <div class="best-set__content">
-                <h3 class="best-set__title">
-                  <a href="product.html"
-                    >Vestibulum in elementum erat Interdum et malesuada fames.</a
-                  >
-                </h3>
-                <p class="rating rating--small">
-                  <img src="../assets/icons/ui/star.svg" alt="" class="rating__star" /><img
-                    src="../assets/icons/ui/star.svg"
-                    alt=""
-                    class="rating__star"
-                  /><img src="../assets/icons/ui/star.svg" alt="" class="rating__star" /><img
-                    src="../assets/icons/ui/star.svg"
-                    alt=""
-                    class="rating__star"
-                  /><img src="../assets/icons/ui/star.svg" alt="" class="rating__star" />
-                </p>
-                <p class="best-set__price">$1200</p>
-              </div>
-            </li>
-            <li class="best-set">
-              <img
-                src="../assets/images/best-sets/set-blue.png"
-                alt="blue suitcase set"
-                class="best-set__image"
-              />
-              <div class="best-set__content">
-                <h3 class="best-set__title">
-                  <a href="product.html">Laoreet rhoncus ipsum eget tempus raesent convallis.</a>
-                </h3>
-                <p class="rating rating--small">
-                  <img src="../assets/icons/ui/star.svg" alt="" class="rating__star" /><img
-                    src="../assets/icons/ui/star.svg"
-                    alt=""
-                    class="rating__star"
-                  /><img src="../assets/icons/ui/star.svg" alt="" class="rating__star" /><img
-                    src="../assets/icons/ui/star.svg"
-                    alt=""
-                    class="rating__star"
-                  /><img src="../assets/icons/ui/grey-star.svg" alt="" class="rating__star" />
-                </p>
-                <p class="best-set__price">$2100</p>
-              </div>
-            </li>
-            <li class="best-set">
-              <img
-                src="../assets/images/best-sets/set-yellow.png"
-                alt="yellow suitcase set"
-                class="best-set__image"
-              />
-              <div class="best-set__content">
-                <h3 class="best-set__title">
-                  <a href="product.html"
-                    >Interdum et malesuada fames ante ipsum primis in faucibus.</a
-                  >
-                </h3>
-                <p class="rating rating--small">
-                  <img src="../assets/icons/ui/star.svg" alt="" class="rating__star" /><img
-                    src="../assets/icons/ui/star.svg"
-                    alt=""
-                    class="rating__star"
-                  /><img src="../assets/icons/ui/star.svg" alt="" class="rating__star" /><img
-                    src="../assets/icons/ui/star.svg"
-                    alt=""
-                    class="rating__star"
-                  /><img src="../assets/icons/ui/grey-star.svg" alt="" class="rating__star" />
-                </p>
-                <p class="best-set__price">$1500</p>
-              </div>
-            </li>
-            <li class="best-set">
-              <img
-                src="../assets/images/best-sets/set-green.png"
-                alt="green suitcase set"
-                class="best-set__image"
-              />
-              <div class="best-set__content">
-                <h3 class="best-set__title">
-                  <a href="product.html">Rhoncus ipsum eget tempus Praesent convallis fermentum.</a>
-                </h3>
-                <p class="rating rating--small">
-                  <img src="../assets/icons/ui/star.svg" alt="" class="rating__star" /><img
-                    src="../assets/icons/ui/star.svg"
-                    alt=""
-                    class="rating__star"
-                  /><img src="../assets/icons/ui/star.svg" alt="" class="rating__star" /><img
-                    src="../assets/icons/ui/star.svg"
-                    alt=""
-                    class="rating__star"
-                  /><img src="../assets/icons/ui/grey-star.svg" alt="" class="rating__star" />
-                </p>
-                <p class="best-set__price">$1100</p>
-              </div>
-            </li>
-          </ul>
+          <ul class="best-sets best-sets--hidden"></ul>
         </aside>
       </section>
     </main>
@@ -617,25 +445,38 @@
     </footer>
 
     <dialog class="modal">
-      <form method="dialog" class="login">
+      <form method="dialog" class="login" novalidate>
         <label class="form__field">
           <span class="login__label">Email address <span class="form__required">*</span></span>
-          <input type="email" name="email" class="input input--accent login__input" required />
+          <input
+            type="email"
+            id="loginEmail"
+            name="email"
+            class="input input--accent login__input"
+            autocomplete="email"
+            required
+          />
+          <span class="form__error login__error" id="loginEmailError"></span>
         </label>
-        <label class="form__field">
-          <span class="login__label">Password <span class="form__required">*</span></span>
-          <span class="login__password">
+        <div class="form__field">
+          <label for="loginPassword" class="login__label"
+            >Password <span class="form__required">*</span></label
+          >
+          <div class="login__password">
             <input
               type="password"
+              id="loginPassword"
               name="password"
               class="input input--accent login__input"
+              autocomplete="current-password"
               required
             />
             <button type="button" class="login__toggle">
               <img src="../assets/icons/ui/eye.svg" alt="" />
             </button>
-          </span>
-        </label>
+          </div>
+          <span class="form__error login__error" id="loginPasswordError"></span>
+        </div>
         <div class="login__options">
           <label class="checkbox login__remember">
             <input type="checkbox" name="remember" class="checkbox__input" />
@@ -648,5 +489,15 @@
         </button>
       </form>
     </dialog>
+    <dialog class="modal" id="searchModal">
+      <form method="dialog" class="notice">
+        <p class="notice__text">Product not found</p>
+        <button type="submit" class="button button--primary button--compact notice__button">
+          OK
+        </button>
+      </form>
+    </dialog>
+    <script type="module" src="../../dist/js/main.js"></script>
+    <script type="module" src="../../dist/js/catalog.js"></script>
   </body>
 </html>

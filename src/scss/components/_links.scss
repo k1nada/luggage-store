@@ -1,7 +1,11 @@
 @use '../abstracts/variables' as *;
 
-.link:hover {
-  color: $color-primary;
+.link {
+  transition: color $transition-duration ease;
+
+  &:hover {
+    color: $color-primary;
+  }
 }
 
 .link--accent {

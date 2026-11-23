@@ -32,14 +32,14 @@
 .page-hero__title {
   font-size: $font-size-h1;
   font-weight: $font-weight-bold;
-  line-height: $line-height-tight;
+  line-height: 1.2;
 }
 
 .page-hero__text {
   max-width: 430px;
   margin: $space-m auto 0;
   font-size: $font-size-m;
-  line-height: $line-height-relaxed;
+  line-height: 1.8;
 }
 
 @include media($breakpoint-tablet) {

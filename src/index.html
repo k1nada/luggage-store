@@ -42,12 +42,12 @@
         </a>
 
         <div class="header__actions">
-          <button type="button" class="header__action">
+          <button type="button" class="header__action header__account">
             <img src="assets/icons/ui/user.svg" alt="" class="header__action-icon" />
           </button>
           <a href="html/cart.html" class="header__action header__cart-link">
             <img src="assets/icons/ui/shopping-cart.svg" alt="" class="header__action-icon" />
-            <span class="header__cart-count" hidden>0</span>
+            <span class="header__cart-count" hidden></span>
           </a>
           <label for="menu-toggle" class="header__action header__burger">
             <img src="assets/icons/ui/burger.svg" alt="" class="header__action-icon" />
@@ -62,7 +62,9 @@
             <a href="index.html" class="link header__menu-link header__menu-link--active">Home</a>
           </li>
           <li>
-            <a href="html/catalog.html" class="link header__menu-link">Catalog</a>
+            <a href="html/catalog.html" class="link header__menu-link header__menu-link--arrow"
+              >Catalog</a
+            >
           </li>
           <li>
             <a href="html/about.html" class="link header__menu-link">About Us</a>
@@ -126,132 +128,77 @@
         <h2 class="travel__title">Travel suitcases</h2>
         <p class="travel__subtitle">Duis vestibulum elit vel neque pharetra</p>
 
-        <ul class="travel__list">
-          <li class="travel__card">
-            <img src="assets/images/travel/suitcase-real-life-1.png" alt="" class="travel__image" />
-            <div class="travel__content">
-              <h3 class="travel__card-title">Duis vestibulum elit vel neque.</h3>
-              <p class="travel__card-text">
-                Duis vestibulum vel neque pharetra vulputate. Quisque scelerisque nisi.
-              </p>
-            </div>
-          </li>
-          <li class="travel__card">
-            <img src="assets/images/travel/suitcase-real-life-2.png" alt="" class="travel__image" />
-            <div class="travel__content">
-              <h3 class="travel__card-title">Neque vestibulum elit nequvel.</h3>
-              <p class="travel__card-text">
-                Duis vestibulum vel neque pharetra vulputate. Quisque scelerisque nisi.
-              </p>
-            </div>
-          </li>
-          <li class="travel__card">
-            <img src="assets/images/travel/suitcase-real-life-3.png" alt="" class="travel__image" />
-            <div class="travel__content">
-              <h3 class="travel__card-title">Elituis stibulum elit velneque.</h3>
-              <p class="travel__card-text">
-                Duis vestibulum vel neque pharetra vulputate. Quisque scelerisque nisi.
-              </p>
-            </div>
-          </li>
-          <li class="travel__card">
-            <img src="assets/images/travel/suitcase-real-life-4.png" alt="" class="travel__image" />
-            <div class="travel__content">
-              <h3 class="travel__card-title">Vel vestibulum elit tuvel euqen.</h3>
-              <p class="travel__card-text">
-                Duis vestibulum vel neque pharetra vulputate. Quisque scelerisque nisi.
-              </p>
-            </div>
-          </li>
-        </ul>
+        <div class="travel__slider">
+          <button type="button" class="travel__arrow travel__arrow--prev">
+            <img src="assets/icons/ui/arrow-left.svg" alt="" class="travel__arrow-icon" />
+          </button>
+          <div class="travel__viewport">
+            <ul class="travel__list">
+              <li class="travel__card">
+                <img
+                  src="assets/images/travel/suitcase-real-life-1.png"
+                  alt=""
+                  class="travel__image"
+                />
+                <div class="travel__content">
+                  <h3 class="travel__card-title">Duis vestibulum elit vel neque.</h3>
+                  <p class="travel__card-text" hidden>
+                    Duis vestibulum vel neque pharetra vulputate. Quisque scelerisque nisi.
+                  </p>
+                </div>
+              </li>
+              <li class="travel__card">
+                <img
+                  src="assets/images/travel/suitcase-real-life-2.png"
+                  alt=""
+                  class="travel__image"
+                />
+                <div class="travel__content">
+                  <h3 class="travel__card-title">Neque vestibulum elit nequvel.</h3>
+                  <p class="travel__card-text" hidden>
+                    Duis vestibulum vel neque pharetra vulputate. Quisque scelerisque nisi.
+                  </p>
+                </div>
+              </li>
+              <li class="travel__card">
+                <img
+                  src="assets/images/travel/suitcase-real-life-3.png"
+                  alt=""
+                  class="travel__image"
+                />
+                <div class="travel__content">
+                  <h3 class="travel__card-title">Elituis stibulum elit velneque.</h3>
+                  <p class="travel__card-text" hidden>
+                    Duis vestibulum vel neque pharetra vulputate. Quisque scelerisque nisi.
+                  </p>
+                </div>
+              </li>
+              <li class="travel__card">
+                <img
+                  src="assets/images/travel/suitcase-real-life-4.png"
+                  alt=""
+                  class="travel__image"
+                />
+                <div class="travel__content">
+                  <h3 class="travel__card-title">Vel vestibulum elit tuvel euqen.</h3>
+                  <p class="travel__card-text" hidden>
+                    Duis vestibulum vel neque pharetra vulputate. Quisque scelerisque nisi.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <button type="button" class="travel__arrow travel__arrow--next">
+            <img src="assets/icons/ui/arrow-right.svg" alt="" class="travel__arrow-icon" />
+          </button>
+        </div>
       </section>
 
       <section class="products container">
         <h2 class="products__title">Selected Products</h2>
         <p class="products__subtitle">Duis vestibulum elit vel neque pharetra</p>
 
-        <ul class="products__list">
-          <li>
-            <article class="product-card">
-              <a href="html/product.html" class="product-card__image-wrap">
-                <span class="product-card__badge">Sale</span>
-                <img
-                  src="assets/images/products/suitcase-red.png"
-                  alt="red suitcase"
-                  class="product-card__image"
-                />
-              </a>
-              <h3 class="product-card__title">Vel vestibulum elit tuvel euqen.</h3>
-              <p class="product-card__price">$250</p>
-              <button
-                type="button"
-                class="button button--primary button--small product-card__button"
-              >
-                Add To Cart
-              </button>
-            </article>
-          </li>
-          <li>
-            <article class="product-card">
-              <a href="html/product.html" class="product-card__image-wrap">
-                <span class="product-card__badge">Sale</span>
-                <img
-                  src="assets/images/products/suitcase-beige.png"
-                  alt="beige suitcase"
-                  class="product-card__image"
-                />
-              </a>
-              <h3 class="product-card__title">Vel vestibulum elit tuvel euqen.</h3>
-              <p class="product-card__price">$200</p>
-              <button
-                type="button"
-                class="button button--primary button--small product-card__button"
-              >
-                Add To Cart
-              </button>
-            </article>
-          </li>
-          <li>
-            <article class="product-card">
-              <a href="html/product.html" class="product-card__image-wrap">
-                <span class="product-card__badge">Sale</span>
-                <img
-                  src="assets/images/products/suitcase-pink.png"
-                  alt="pink suitcase"
-                  class="product-card__image"
-                />
-              </a>
-              <h3 class="product-card__title">Vel vestibulum elit tuvel euqen.</h3>
-              <p class="product-card__price">$300</p>
-              <button
-                type="button"
-                class="button button--primary button--small product-card__button"
-              >
-                Add To Cart
-              </button>
-            </article>
-          </li>
-          <li>
-            <article class="product-card">
-              <a href="html/product.html" class="product-card__image-wrap">
-                <span class="product-card__badge">Sale</span>
-                <img
-                  src="assets/images/products/suitcase-blue.png"
-                  alt="blue suitcase"
-                  class="product-card__image"
-                />
-              </a>
-              <h3 class="product-card__title">Vel vestibulum elit tuvel euqen.</h3>
-              <p class="product-card__price">$350</p>
-              <button
-                type="button"
-                class="button button--primary button--small product-card__button"
-              >
-                Add To Cart
-              </button>
-            </article>
-          </li>
-        </ul>
+        <ul class="products__list" data-block="Selected Products"></ul>
       </section>
 
       <section class="offer container">
@@ -275,86 +222,7 @@
         <h2 class="products__title">New Products Arrival</h2>
         <p class="products__subtitle">Duis vestibulum elit vel neque pharetra</p>
 
-        <ul class="products__list">
-          <li>
-            <article class="product-card">
-              <a href="html/product.html" class="product-card__image-wrap">
-                <img
-                  src="assets/images/products/suitcase-hand-grey.png"
-                  alt="grey suitcase"
-                  class="product-card__image"
-                />
-              </a>
-              <h3 class="product-card__title">Vel vestibulum elit tuvel euqen.</h3>
-              <p class="product-card__price">$150</p>
-              <a
-                href="html/product.html"
-                class="button button--primary button--small product-card__button"
-              >
-                View Product
-              </a>
-            </article>
-          </li>
-          <li>
-            <article class="product-card">
-              <a href="html/product.html" class="product-card__image-wrap">
-                <span class="product-card__badge">Sale</span>
-                <img
-                  src="assets/images/catalog/suitcase-yellow.png"
-                  alt="yellow suitcase"
-                  class="product-card__image"
-                />
-              </a>
-              <h3 class="product-card__title">Vel vestibulum elit tuvel euqen.</h3>
-              <p class="product-card__price">$450</p>
-              <a
-                href="html/product.html"
-                class="button button--primary button--small product-card__button"
-              >
-                View Product
-              </a>
-            </article>
-          </li>
-          <li>
-            <article class="product-card">
-              <a href="html/product.html" class="product-card__image-wrap">
-                <img
-                  src="assets/images/products/suitcase-light-blue.png"
-                  alt="light blue suitcase"
-                  class="product-card__image"
-                />
-              </a>
-              <h3 class="product-card__title">Vel vestibulum elit tuvel euqen.</h3>
-              <p class="product-card__price">$250</p>
-              <a
-                href="html/product.html"
-                class="button button--primary button--small product-card__button"
-              >
-                View Product
-              </a>
-            </article>
-          </li>
-          <li>
-            <article class="product-card">
-              <a href="html/product.html" class="product-card__image-wrap">
-                <span class="product-card__badge">Sale</span>
-                <img
-                  src="assets/images/products/suitcase-dark-blue.png"
-                  alt="dark blue suitcase"
-                  class="product-card__image"
-                />
-              </a>
-              <h3 class="product-card__title">Vel vestibulum elit tuvel euqen.</h3>
-              <p class="product-card__price">$200</p>
-              <a
-                href="html/product.html"
-                class="button button--primary button--small product-card__button"
-              >
-                View Product
-              </a>
-            </article>
-          </li>
-        </ul>
+        <ul class="products__list" data-block="New Products Arrival"></ul>
       </section>
 
       <section class="testimonials container">
@@ -508,25 +376,38 @@
     </footer>
 
     <dialog class="modal">
-      <form method="dialog" class="login">
+      <form method="dialog" class="login" novalidate>
         <label class="form__field">
           <span class="login__label">Email address <span class="form__required">*</span></span>
-          <input type="email" name="email" class="input input--accent login__input" required />
+          <input
+            type="email"
+            id="loginEmail"
+            name="email"
+            class="input input--accent login__input"
+            autocomplete="email"
+            required
+          />
+          <span class="form__error login__error" id="loginEmailError"></span>
         </label>
-        <label class="form__field">
-          <span class="login__label">Password <span class="form__required">*</span></span>
-          <span class="login__password">
+        <div class="form__field">
+          <label for="loginPassword" class="login__label"
+            >Password <span class="form__required">*</span></label
+          >
+          <div class="login__password">
             <input
               type="password"
+              id="loginPassword"
               name="password"
               class="input input--accent login__input"
+              autocomplete="current-password"
               required
             />
             <button type="button" class="login__toggle">
               <img src="assets/icons/ui/eye.svg" alt="" />
             </button>
-          </span>
-        </label>
+          </div>
+          <span class="form__error login__error" id="loginPasswordError"></span>
+        </div>
         <div class="login__options">
           <label class="checkbox login__remember">
             <input type="checkbox" name="remember" class="checkbox__input" />
@@ -539,5 +420,7 @@
         </button>
       </form>
     </dialog>
+    <script type="module" src="../dist/js/main.js"></script>
+    <script type="module" src="../dist/js/home.js"></script>
   </body>
 </html>

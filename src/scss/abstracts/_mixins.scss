@@ -18,7 +18,7 @@
   margin-bottom: $space-xs;
   font-size: $font-size-h2;
   font-weight: $font-weight-black;
-  line-height: $line-height-tight;
+  line-height: 1.2;
 
   @include media($breakpoint-laptop) {
     font-size: $font-size-h3;
@@ -32,7 +32,7 @@
 @mixin section-subtitle {
   margin-bottom: $space-3xl;
   font-size: $font-size-l;
-  line-height: $line-height-none;
+  line-height: 1;
   color: $color-dark;
 
   @include media($breakpoint-tablet) {
@@ -66,6 +66,6 @@
   align-items: center;
 }
 
-@mixin hero-image($url, $overlay: $color-overlay) {
-  background-image: linear-gradient($overlay, $overlay), url($url);
+@mixin hero-image($url) {
+  background-image: linear-gradient($color-overlay, $color-overlay), url($url);
 }

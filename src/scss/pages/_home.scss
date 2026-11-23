@@ -28,14 +28,14 @@
   margin-bottom: $space-l;
   font-size: $font-size-h1;
   font-weight: $font-weight-black;
-  line-height: $line-height-heading;
+  line-height: 1.4;
 }
 
 .hero__text {
   max-width: 640px;
   margin-bottom: $space-xl;
   font-size: $font-size-m;
-  line-height: $line-height-base;
+  line-height: 1.6;
   color: $color-text-muted;
 }
 
@@ -86,12 +86,12 @@
   margin-bottom: $space-l;
   font-size: $font-size-h2;
   font-weight: $font-weight-black;
-  line-height: $line-height-base;
+  line-height: 1.6;
 }
 
 .promo__text {
   font-size: $font-size-l;
-  line-height: $line-height-base;
+  line-height: 1.6;
   color: $color-text-muted;
 
   &:not(:last-child) {
@@ -101,6 +101,7 @@
 
 .promo__discount {
   @extend %background-cover;
+  @include hero-image('../src/assets/images/banners/suitcases-main-banner.png');
 
   display: flex;
   flex-direction: column;
@@ -108,9 +109,6 @@
   align-items: flex-start;
   padding: $space-3xl;
   color: $color-white;
-  background-image:
-    linear-gradient($color-overlay, $color-overlay),
-    url('../src/assets/images/banners/suitcases-main-banner.png');
 }
 
 .promo__discount-title {
@@ -123,7 +121,7 @@
   max-width: 400px;
   margin-bottom: $space-l;
   font-size: $font-size-m;
-  line-height: $line-height-relaxed;
+  line-height: 1.8;
 }
 
 .travel {
@@ -139,17 +137,63 @@
   @include section-subtitle;
 }
 
+.travel__slider {
+  position: relative;
+}
+
+.travel__viewport {
+  margin: -$space-xl 0;
+  padding: $space-xl 0;
+  overflow: hidden;
+}
+
 .travel__list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
   gap: $space-2xl;
   text-align: left;
 }
 
+.travel__arrow {
+  @extend %reset-button;
+  @extend %flex-center;
+  @include square(48px);
+
+  position: absolute;
+  top: 50%;
+  z-index: $z-index-control;
+  background: $color-white;
+  border-radius: 50%;
+  box-shadow: $shadow-card;
+  transform: translateY(-50%);
+
+  &:hover {
+    background: $color-background-light;
+  }
+}
+
+.travel__arrow--prev {
+  left: $space-s;
+}
+
+.travel__arrow--next {
+  right: $space-s;
+}
+
 .travel__card {
   position: relative;
+  flex: 1;
+  min-width: 0;
   height: 600px;
   overflow: hidden;
+  transition: box-shadow $transition-duration;
+
+  &:hover {
+    box-shadow: $shadow-card;
+  }
+
+  &:hover .travel__image {
+    transform: scale(1.1);
+  }
 
   &::after {
     content: '';
@@ -164,6 +208,8 @@
 
 .travel__image {
   @include cover-image;
+
+  transition: transform $transition-duration;
 }
 
 .travel__content {
@@ -179,12 +225,12 @@
   margin-bottom: $space-s;
   font-size: $font-size-m;
   font-weight: $font-weight-bold;
-  line-height: $line-height-base;
+  line-height: 1.6;
 }
 
 .travel__card-text {
   font-size: $font-size-l;
-  line-height: $line-height-base;
+  line-height: 1.6;
 }
 
 .testimonials {
@@ -225,7 +271,7 @@
 .testimonials__text {
   margin-bottom: $space-m;
   font-size: $font-size-m;
-  line-height: $line-height-relaxed;
+  line-height: 1.8;
 }
 
 .testimonials__author {
@@ -315,13 +361,29 @@
     padding: $space-3xl 0;
   }
 
-  .travel__list {
-    grid-template-columns: repeat(auto-fill, $column-width);
-    justify-content: center;
+  .travel__slider {
+    padding-bottom: $space-3xl;
+  }
+
+  .travel__arrow {
+    @include square($slider-arrow-size-mobile);
+
+    top: auto;
+    bottom: 0;
+    transform: none;
+  }
+
+  .travel__arrow--prev {
+    left: calc(50% - $slider-arrow-size-mobile - $space-2xs);
+  }
+
+  .travel__arrow--next {
+    right: calc(50% - $slider-arrow-size-mobile - $space-2xs);
   }
 
   .travel__card {
-    aspect-ratio: 3 / 4;
+    flex: 0 0 100%;
+    aspect-ratio: 4 / 3;
   }
 
   .testimonials__list {

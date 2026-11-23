@@ -27,7 +27,7 @@
   font-size: $font-size-s;
   color: $color-black;
   background: $color-white;
-  border: $border-width solid $color-border;
+  border: 1px solid $color-border;
 
   &::placeholder {
     color: $color-text-muted;
@@ -35,7 +35,37 @@
 }
 
 .input--accent {
-  border: $border-width-medium solid $color-primary-light;
+  border: 2px solid $color-primary-light;
+}
+
+.input--invalid {
+  border-color: $color-error;
+}
+
+.form__error {
+  font-size: $font-size-s;
+  color: $color-error;
+
+  &:empty {
+    display: none;
+  }
+}
+
+.form__status {
+  font-size: $font-size-s;
+  font-weight: $font-weight-bold;
+
+  &:empty {
+    display: none;
+  }
+}
+
+.form__status--success {
+  color: $color-success;
+}
+
+.form__status--error {
+  color: $color-error;
 }
 
 .input--textarea {
@@ -47,14 +77,15 @@
   padding: $space-xs $space-2xl $space-xs $space-s;
   font: inherit;
   color: $color-text-muted;
-  background: $color-white;
-  border: $border-width solid $color-border;
+  background: $color-white url('../src/assets/icons/ui/arrow-down.svg') right $space-s center
+    no-repeat;
+  border: 1px solid $color-border;
   appearance: none;
   cursor: pointer;
 }
 
 .select--bold {
-  border-width: $border-width-medium;
+  border-width: 2px;
 }
 
 .checkbox {
@@ -67,15 +98,8 @@
 }
 
 .checkbox__input {
-  @include square(16px);
+  @include square(18px);
 
-  background: $color-white;
-  border: $border-width solid $color-text-muted;
-  appearance: none;
+  accent-color: $color-primary;
   cursor: pointer;
-
-  &:checked {
-    background: $color-primary;
-    border-color: $color-primary;
-  }
 }

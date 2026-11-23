@@ -13,7 +13,7 @@
 .features__item {
   @include flex-column-center;
 
-  max-width: 260px;
+  max-width: $column-width;
   text-align: center;
 }
 
@@ -34,7 +34,7 @@
 
 .features__text {
   font-size: $font-size-m;
-  line-height: $line-height-relaxed;
+  line-height: 1.8;
 }
 
 .features--contacts .features__text {

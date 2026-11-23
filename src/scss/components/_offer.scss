@@ -4,6 +4,7 @@
 
 .offer {
   @include section-margin;
+  @include hero-image('../src/assets/images/banners/overlay.png');
   @extend %background-cover;
 
   display: grid;
@@ -13,15 +14,13 @@
   min-height: 410px;
   padding: $space-2xl $space-4xl $space-2xl $space-section;
   color: $color-white;
-  background-image:
-    linear-gradient($color-overlay, $color-overlay), url('../src/assets/images/banners/overlay.png');
   box-shadow: $shadow-card;
 }
 
 .offer__percent {
   font-size: $font-size-display;
   font-weight: $font-weight-black;
-  line-height: $line-height-none;
+  line-height: 1;
   letter-spacing: -4px;
 }
 
@@ -47,7 +46,7 @@
 .offer__text {
   margin-bottom: $space-xl;
   font-size: $font-size-l;
-  line-height: $line-height-base;
+  line-height: 1.6;
 }
 
 .offer__button {

@@ -41,7 +41,7 @@
   margin-bottom: $space-xs;
   font-size: $font-size-l;
   font-weight: $font-weight-bold;
-  line-height: $line-height-heading;
+  line-height: 1.4;
 }
 
 .product-card__price {
@@ -73,6 +73,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: $space-2xl;
+  min-height: $product-list-min-height;
 }
 
 @include media($breakpoint-laptop) {

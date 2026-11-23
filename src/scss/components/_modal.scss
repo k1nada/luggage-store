@@ -55,15 +55,28 @@
 }
 
 .login__remember {
-  font-size: $font-size-2xs;
+  font-size: $font-size-s;
 }
 
 .login__forgot {
-  font-size: $font-size-2xs;
+  font-size: $font-size-s;
 }
 
 .login__submit {
   width: 100%;
+}
+
+.notice {
+  @include flex-column-center;
+
+  gap: $space-xl;
+  padding: $space-2xl;
+  text-align: center;
+}
+
+.notice__text {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
 }
 
 @include media($breakpoint-tablet) {

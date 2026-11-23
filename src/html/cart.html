@@ -42,12 +42,12 @@
         </a>
 
         <div class="header__actions">
-          <button type="button" class="header__action">
+          <button type="button" class="header__action header__account">
             <img src="../assets/icons/ui/user.svg" alt="" class="header__action-icon" />
           </button>
           <a href="cart.html" class="header__action header__cart-link">
             <img src="../assets/icons/ui/shopping-cart.svg" alt="" class="header__action-icon" />
-            <span class="header__cart-count" hidden>0</span>
+            <span class="header__cart-count" hidden></span>
           </a>
           <label for="menu-toggle" class="header__action header__burger">
             <img src="../assets/icons/ui/burger.svg" alt="" class="header__action-icon" />
@@ -62,7 +62,9 @@
             <a href="../index.html" class="link header__menu-link">Home</a>
           </li>
           <li>
-            <a href="catalog.html" class="link header__menu-link">Catalog</a>
+            <a href="catalog.html" class="link header__menu-link header__menu-link--arrow"
+              >Catalog</a
+            >
           </li>
           <li>
             <a href="about.html" class="link header__menu-link">About Us</a>
@@ -81,7 +83,7 @@
         </div>
       </section>
 
-      <section class="cart container">
+      <section class="cart cart--loading container">
         <div class="cart__table-wrap">
           <table class="cart__table">
             <colgroup>
@@ -89,95 +91,27 @@
               <col class="cart__col-name" />
               <col span="4" />
             </colgroup>
-            <tr>
-              <th class="cart__head">Image</th>
-              <th class="cart__head">Product Name</th>
-              <th class="cart__head">Price</th>
-              <th class="cart__head">Quantity</th>
-              <th class="cart__head">Total</th>
-              <th class="cart__head">Delete</th>
-            </tr>
-            <tr class="cart__row">
-              <td class="cart__cell">
-                <img
-                  src="../assets/images/my-cart/suitcase-dark-blue.png"
-                  alt="Nomad Haven"
-                  class="cart__image"
-                />
-              </td>
-              <td class="cart__cell cart__title">Nomad Haven</td>
-              <td class="cart__cell">$250</td>
-              <td class="cart__cell">
-                <div class="quantity">
-                  <button type="button" class="quantity__button">-</button>
-                  <span class="quantity__value">1</span>
-                  <button type="button" class="quantity__button">+</button>
-                </div>
-              </td>
-              <td class="cart__cell">$250</td>
-              <td class="cart__cell">
-                <button type="button" class="cart__delete">
-                  <img src="../assets/icons/ui/trash.svg" alt="" class="cart__delete-icon" />
-                </button>
-              </td>
-            </tr>
-            <tr class="cart__row">
-              <td class="cart__cell">
-                <img
-                  src="../assets/images/my-cart/kid-suitcase.png"
-                  alt="WanderWay Kid"
-                  class="cart__image"
-                />
-              </td>
-              <td class="cart__cell cart__title">WanderWay Kid</td>
-              <td class="cart__cell">$690</td>
-              <td class="cart__cell">
-                <div class="quantity">
-                  <button type="button" class="quantity__button">-</button>
-                  <span class="quantity__value">1</span>
-                  <button type="button" class="quantity__button">+</button>
-                </div>
-              </td>
-              <td class="cart__cell">$690</td>
-              <td class="cart__cell">
-                <button type="button" class="cart__delete">
-                  <img src="../assets/icons/ui/trash.svg" alt="" class="cart__delete-icon" />
-                </button>
-              </td>
-            </tr>
-            <tr class="cart__row">
-              <td class="cart__cell">
-                <img
-                  src="../assets/images/my-cart/set-grey.png"
-                  alt="Crossroads Elite"
-                  class="cart__image"
-                />
-              </td>
-              <td class="cart__cell cart__title">Crossroads Elite</td>
-              <td class="cart__cell">$1200</td>
-              <td class="cart__cell">
-                <div class="quantity">
-                  <button type="button" class="quantity__button">-</button>
-                  <span class="quantity__value">1</span>
-                  <button type="button" class="quantity__button">+</button>
-                </div>
-              </td>
-              <td class="cart__cell">$1200</td>
-              <td class="cart__cell">
-                <button type="button" class="cart__delete">
-                  <img src="../assets/icons/ui/trash.svg" alt="" class="cart__delete-icon" />
-                </button>
-              </td>
-            </tr>
+            <thead>
+              <tr>
+                <th class="cart__head">Image</th>
+                <th class="cart__head">Product Name</th>
+                <th class="cart__head">Price</th>
+                <th class="cart__head">Quantity</th>
+                <th class="cart__head">Total</th>
+                <th class="cart__head">Delete</th>
+              </tr>
+            </thead>
+            <tbody class="cart__body"></tbody>
           </table>
         </div>
+        <p class="cart__message" hidden></p>
 
         <div class="cart__bottom">
           <div class="cart__actions">
             <a href="catalog.html" class="button button--primary button--uppercase">
               Continue Shopping
             </a>
-            <button type="button" class="button button--primary button--uppercase">
+            <button type="button" class="button button--primary button--uppercase cart__clear">
               Clear Shopping Cart
             </button>
           </div>
@@ -186,15 +120,19 @@
             <dl>
               <div class="cart-summary__row">
                 <dt>Sub Total</dt>
-                <dd>$2140</dd>
+                <dd data-summary="subtotal">$0</dd>
+              </div>
+              <div class="cart-summary__row cart-summary__row--discount cart-summary__row--hidden">
+                <dt>Discount (10%)</dt>
+                <dd data-summary="discount">$0</dd>
               </div>
               <div class="cart-summary__row">
                 <dt>Shipping</dt>
-                <dd>$30</dd>
+                <dd data-summary="shipping">$0</dd>
               </div>
               <div class="cart-summary__row cart-summary__row--total">
                 <dt>Total</dt>
-                <dd>$2170</dd>
+                <dd data-summary="total">$0</dd>
               </div>
             </dl>
             <button
@@ -312,25 +250,38 @@
     </footer>
 
     <dialog class="modal">
-      <form method="dialog" class="login">
+      <form method="dialog" class="login" novalidate>
         <label class="form__field">
           <span class="login__label">Email address <span class="form__required">*</span></span>
-          <input type="email" name="email" class="input input--accent login__input" required />
+          <input
+            type="email"
+            id="loginEmail"
+            name="email"
+            class="input input--accent login__input"
+            autocomplete="email"
+            required
+          />
+          <span class="form__error login__error" id="loginEmailError"></span>
         </label>
-        <label class="form__field">
-          <span class="login__label">Password <span class="form__required">*</span></span>
-          <span class="login__password">
+        <div class="form__field">
+          <label for="loginPassword" class="login__label"
+            >Password <span class="form__required">*</span></label
+          >
+          <div class="login__password">
             <input
               type="password"
+              id="loginPassword"
               name="password"
               class="input input--accent login__input"
+              autocomplete="current-password"
               required
             />
             <button type="button" class="login__toggle">
               <img src="../assets/icons/ui/eye.svg" alt="" />
             </button>
-          </span>
-        </label>
+          </div>
+          <span class="form__error login__error" id="loginPasswordError"></span>
+        </div>
         <div class="login__options">
           <label class="checkbox login__remember">
             <input type="checkbox" name="remember" class="checkbox__input" />
@@ -343,5 +294,7 @@
         </button>
       </form>
     </dialog>
+    <script type="module" src="../../dist/js/main.js"></script>
+    <script type="module" src="../../dist/js/cart.js"></script>
   </body>
 </html>

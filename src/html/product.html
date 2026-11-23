@@ -42,12 +42,12 @@
         </a>
 
         <div class="header__actions">
-          <button type="button" class="header__action">
+          <button type="button" class="header__action header__account">
             <img src="../assets/icons/ui/user.svg" alt="" class="header__action-icon" />
           </button>
           <a href="cart.html" class="header__action header__cart-link">
             <img src="../assets/icons/ui/shopping-cart.svg" alt="" class="header__action-icon" />
-            <span class="header__cart-count" hidden>0</span>
+            <span class="header__cart-count" hidden></span>
           </a>
           <label for="menu-toggle" class="header__action header__burger">
             <img src="../assets/icons/ui/burger.svg" alt="" class="header__action-icon" />
@@ -62,7 +62,9 @@
             <a href="../index.html" class="link header__menu-link">Home</a>
           </li>
           <li>
-            <a href="catalog.html" class="link header__menu-link">Catalog</a>
+            <a href="catalog.html" class="link header__menu-link header__menu-link--arrow"
+              >Catalog</a
+            >
           </li>
           <li>
             <a href="about.html" class="link header__menu-link">About Us</a>
@@ -75,10 +77,10 @@
     </header>
 
     <main>
-      <section class="product-details container">
+      <section class="product-details product-details--loading container">
         <div class="product-details__gallery">
           <img
-            src="../assets/images/products/suitcase-yellow.png"
+            src="../assets/images/products/suitcase-yellow.jpg"
             alt="yellow suitcase"
             class="product-details__image"
           />
@@ -99,7 +101,7 @@
             </li>
             <li>
               <img
-                src="../assets/images/products/suitcase-yellow-3.png"
+                src="../assets/images/products/suitcase-yellow-3.jpg"
                 alt=""
                 class="product-details__thumb"
               />
@@ -149,28 +151,52 @@
           <form class="product-details__form">
             <label class="form__field">
               <span class="form__label">Size</span>
-              <select name="size" class="select select--bold product-details__select">
-                <option value="">Choose option</option>
+              <select name="size" class="select select--bold product-details__select" required>
+                <option value="" selected disabled hidden>Choose option</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="S-L">S-L</option>
+                <option value="S, M, XL">S, M, XL</option>
               </select>
             </label>
             <label class="form__field">
               <span class="form__label">Color</span>
-              <select name="color" class="select select--bold product-details__select">
-                <option value="">Choose option</option>
+              <select name="color" class="select select--bold product-details__select" required>
+                <option value="" selected disabled hidden>Choose option</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="black">Black</option>
+                <option value="grey">Grey</option>
+                <option value="yellow">Yellow</option>
+                <option value="pink">Pink</option>
               </select>
             </label>
             <label class="form__field">
               <span class="form__label">Category</span>
               <select name="category" class="select select--bold product-details__select">
-                <option value="">Choose option</option>
+                <option value="" selected disabled hidden>Choose option</option>
+                <option value="carry-ons">Carry-ons</option>
+                <option value="suitcases">Suitcases</option>
+                <option value="luggage sets">Luggage sets</option>
+                <option value="kids' luggage">Kids' luggage</option>
               </select>
             </label>
 
             <div class="product-details__actions">
               <div class="quantity quantity--bordered">
-                <button type="button" class="quantity__button">-</button>
-                <input type="number" name="quantity" value="1" min="1" class="quantity__value" />
-                <button type="button" class="quantity__button">+</button>
+                <button type="button" class="quantity__button" data-action="minus">-</button>
+                <input
+                  type="number"
+                  name="quantity"
+                  value="1"
+                  min="1"
+                  class="quantity__value"
+                  readonly
+                />
+                <button type="button" class="quantity__button" data-action="plus">+</button>
               </div>
               <button
                 type="submit"
@@ -276,7 +302,7 @@
             </article>
           </div>
 
-          <form class="review-form">
+          <form class="review-form" novalidate>
             <h2 class="product-reviews__title">Add Review</h2>
             <p class="review-form__note">
               Your email address won't be shared with anybody. Required fields have the symbol
@@ -334,92 +360,22 @@
             >
               Submit
             </button>
+            <p class="form__status review-form__status"></p>
           </form>
+        </div>
+
+        <div class="product-tabs__content product-tabs__content--hidden">
+          <p>
+            We ship orders in 1-2 business days. Delivery takes 3-5 business days. Shipping costs
+            $30.
+          </p>
+          <p>You can return unused items in the original package within 30 days.</p>
         </div>
       </section>
 
       <section class="products related container">
         <h2 class="related__title">You May Also Like</h2>
-        <ul class="products__list">
-          <li>
-            <article class="product-card">
-              <a href="product.html" class="product-card__image-wrap">
-                <span class="product-card__badge">Sale</span>
-                <img
-                  src="../assets/images/catalog/suitcase-black.png"
-                  alt="black suitcase"
-                  class="product-card__image"
-                />
-              </a>
-              <h3 class="product-card__title">Vel vestibulum elit tuvel euqen.</h3>
-              <p class="product-card__price">$250</p>
-              <button
-                type="button"
-                class="button button--primary button--small product-card__button"
-              >
-                Add To Cart
-              </button>
-            </article>
-          </li>
-          <li>
-            <article class="product-card">
-              <a href="product.html" class="product-card__image-wrap">
-                <img
-                  src="../assets/images/catalog/suitcase-blue.png"
-                  alt="blue suitcase"
-                  class="product-card__image"
-                />
-              </a>
-              <h3 class="product-card__title">Vel vestibulum elit tuvel euqen.</h3>
-              <p class="product-card__price">$200</p>
-              <button
-                type="button"
-                class="button button--primary button--small product-card__button"
-              >
-                Add To Cart
-              </button>
-            </article>
-          </li>
-          <li>
-            <article class="product-card">
-              <a href="product.html" class="product-card__image-wrap">
-                <span class="product-card__badge">Sale</span>
-                <img
-                  src="../assets/images/catalog/suitcase-red.png"
-                  alt="red suitcase"
-                  class="product-card__image"
-                />
-              </a>
-              <h3 class="product-card__title">Vel vestibulum elit tuvel euqen.</h3>
-              <p class="product-card__price">$300</p>
-              <button
-                type="button"
-                class="button button--primary button--small product-card__button"
-              >
-                Add To Cart
-              </button>
-            </article>
-          </li>
-          <li>
-            <article class="product-card">
-              <a href="product.html" class="product-card__image-wrap">
-                <img
-                  src="../assets/images/catalog/suitcase-orange.png"
-                  alt="orange suitcase"
-                  class="product-card__image"
-                />
-              </a>
-              <h3 class="product-card__title">Vel vestibulum elit tuvel euqen.</h3>
-              <p class="product-card__price">$350</p>
-              <button
-                type="button"
-                class="button button--primary button--small product-card__button"
-              >
-                Add To Cart
-              </button>
-            </article>
-          </li>
-        </ul>
+        <ul class="products__list"></ul>
       </section>
     </main>
     <footer class="footer">
@@ -527,25 +483,38 @@
     </footer>
 
     <dialog class="modal">
-      <form method="dialog" class="login">
+      <form method="dialog" class="login" novalidate>
         <label class="form__field">
           <span class="login__label">Email address <span class="form__required">*</span></span>
-          <input type="email" name="email" class="input input--accent login__input" required />
+          <input
+            type="email"
+            id="loginEmail"
+            name="email"
+            class="input input--accent login__input"
+            autocomplete="email"
+            required
+          />
+          <span class="form__error login__error" id="loginEmailError"></span>
         </label>
-        <label class="form__field">
-          <span class="login__label">Password <span class="form__required">*</span></span>
-          <span class="login__password">
+        <div class="form__field">
+          <label for="loginPassword" class="login__label"
+            >Password <span class="form__required">*</span></label
+          >
+          <div class="login__password">
             <input
               type="password"
+              id="loginPassword"
               name="password"
               class="input input--accent login__input"
+              autocomplete="current-password"
               required
             />
             <button type="button" class="login__toggle">
               <img src="../assets/icons/ui/eye.svg" alt="" />
             </button>
-          </span>
-        </label>
+          </div>
+          <span class="form__error login__error" id="loginPasswordError"></span>
+        </div>
         <div class="login__options">
           <label class="checkbox login__remember">
             <input type="checkbox" name="remember" class="checkbox__input" />
@@ -558,5 +527,7 @@
         </button>
       </form>
     </dialog>
+    <script type="module" src="../../dist/js/main.js"></script>
+    <script type="module" src="../../dist/js/product.js"></script>
   </body>
 </html>

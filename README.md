@@ -4,7 +4,7 @@ Capstone project for EPAM JavaScript Fundamentals.
 
 ## Prerequisites
 
-- Node.js 20.19+ and npm
+- Node.js 20+ and npm
 
 ## Setup and run
 
@@ -13,10 +13,10 @@ npm install
 npm run dev
 ```
 
-`npm run dev` compiles SCSS from `src/scss` into CSS in the `dist` folder and opens the site in the browser. Styles are available only after compilation.
+`npm run dev` compiles SCSS and TypeScript from `src` into the `dist` folder and opens the site in the browser. Styles and scripts are available only after compilation.
 
 ## Scripts
 
-- `npm run dev`: compile SCSS and start a local server
-- `npm run compile`: compile SCSS to `dist`
+- `npm run dev`: compile SCSS and TypeScript and start a local server
+- `npm run compile`: compile SCSS and TypeScript to `dist`
 - `npm run lint`: run ESLint and Stylelint

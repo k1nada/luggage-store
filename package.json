@@ -6,7 +6,7 @@
   "author": "",
   "type": "commonjs",
   "scripts": {
-    "compile": "sass src/scss:dist --no-source-map",
+    "compile": "sass src/scss:dist --no-source-map && tsc",
     "dev": "npm run compile && live-server --open=src/index.html",
     "lint": "eslint . && stylelint \"src/**/*.scss\""
   },
@@ -17,6 +17,9 @@
     "live-server": "1.2.2",
     "sass": "1.107.1",
     "stylelint": "17.16.0",
-    "stylelint-config-standard-scss": "17.0.0"
-  }
+    "stylelint-config-standard-scss": "17.0.0",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.72.2"
+  },
+  "keywords": []
 }

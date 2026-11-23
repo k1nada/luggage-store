@@ -6,10 +6,14 @@ $color-dark: #504e4a;
 $color-border: #e5e5e5;
 $color-background-light: #e8e9eb;
 $color-text-muted: #5c5c5c;
-$color-primary-light: rgb(185 39 112 / 60%);
+$color-error: #e53935;
+$color-success: #43a047;
+$color-primary-light: rgba($color-primary, 0.6);
 $color-overlay: rgb(0 0 0 / 40%);
 $color-overlay-light: rgb(0 0 0 / 10%);
 $color-overlay-heavy: rgb(0 0 0 / 50%);
+
+// shadows
 $shadow-card: 0 12px 40px rgb(0 0 0 / 18%);
 
 // fonts
@@ -31,13 +35,6 @@ $font-size-h2: 40px;
 $font-size-h1: 48px;
 $font-size-display: 220px;
 
-// lines
-$line-height-none: 1;
-$line-height-tight: 1.2;
-$line-height-heading: 1.4;
-$line-height-base: 1.6;
-$line-height-relaxed: 1.8;
-
 // spacing
 $space-3xs: 4px;
 $space-2xs: 8px;
@@ -52,17 +49,20 @@ $space-4xl: 80px;
 $space-section: 120px;
 
 // layout
-$container-width: 1300px;
 $page-side-padding: 20px;
 $column-width: 260px;
+$product-list-min-height: 480px;
 $button-min-width: 200px;
+$slider-arrow-size-mobile: 36px;
+$header-menu-padding: 28px;
 $promo-overlap: 100px;
-$border-width: 1px;
-$border-width-medium: 2px;
-$border-width-thick: 3px;
-$border-radius: 4px;
 $z-index-content: 1;
+$z-index-control: 2;
+$z-index-dropdown: 10;
 $z-index-header: 100;
+
+// animation
+$transition-duration: 0.3s;
 
 // breakpoints
 $breakpoint-desktop: 1440px;

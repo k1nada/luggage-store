@@ -26,7 +26,7 @@
   margin-bottom: $space-l;
   font-size: $font-size-m;
   font-weight: $font-weight-bold;
-  line-height: $line-height-none;
+  line-height: 1;
 }
 
 .footer__links {
@@ -46,7 +46,7 @@
 }
 
 .footer__text {
-  line-height: $line-height-relaxed;
+  line-height: 1.8;
 }
 
 .footer__contacts {
@@ -65,7 +65,7 @@
   display: flex;
   align-items: center;
   gap: $space-s;
-  line-height: $line-height-relaxed;
+  line-height: 1.8;
 }
 
 .footer__contact-icon {
@@ -91,7 +91,7 @@
   margin-bottom: $space-xl;
   font-size: $font-size-l;
   font-weight: $font-weight-bold;
-  line-height: $line-height-none;
+  line-height: 1;
 }
 
 .benefits__list {
@@ -113,7 +113,7 @@
 .benefits__text {
   max-width: 200px;
   font-size: $font-size-m;
-  line-height: $line-height-relaxed;
+  line-height: 1.8;
 }
 
 @include media($breakpoint-desktop) {
