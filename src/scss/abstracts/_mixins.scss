@@ -69,3 +69,8 @@
 @mixin hero-image($url) {
   background-image: linear-gradient($color-overlay, $color-overlay), url($url);
 }
+
+@mixin centered-columns {
+  grid-template-columns: repeat(auto-fill, $column-width);
+  justify-content: center;
+}

@@ -155,7 +155,6 @@
   }
 
   .benefits__list {
-    grid-template-columns: repeat(auto-fill, $column-width);
-    justify-content: center;
+    @include centered-columns;
   }
 }

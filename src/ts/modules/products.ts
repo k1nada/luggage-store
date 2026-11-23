@@ -13,10 +13,7 @@ export function createStars(rating: number): string {
   let stars = '';
 
   for (let i = 0; i < STARS; i++) {
-    let icon = 'grey-star';
-    if (i < Math.round(rating)) {
-      icon = 'star';
-    }
+    const icon = i < Math.round(rating) ? 'star' : 'grey-star';
     stars += `<img src="/src/assets/icons/ui/${icon}.svg" alt="" class="rating__star" />`;
   }
 

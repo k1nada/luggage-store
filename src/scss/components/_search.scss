@@ -9,6 +9,19 @@
 .search__input {
   padding: $space-xs $space-2xl $space-xs $space-s;
   font-size: $font-size-m;
+
+  &::-webkit-search-cancel-button {
+    @include square(10px);
+
+    background: url('../src/assets/icons/ui/close.svg') center / contain no-repeat;
+    opacity: 0.6;
+    appearance: none;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
 
 .search__button {

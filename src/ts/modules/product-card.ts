@@ -11,12 +11,8 @@ export function renderProductCards(
 
   products.forEach((product) => {
     const url = `/src/html/product.html?id=${product.id}`;
-    let saleBadge = '';
+    const saleBadge = product.salesStatus ? '<span class="product-card__badge">Sale</span>' : '';
     let buttonHtml: string;
-
-    if (product.salesStatus) {
-      saleBadge = '<span class="product-card__badge">Sale</span>';
-    }
 
     if (withCartButton) {
       buttonHtml = `<button type="button" class="button button--primary button--small product-card__button" data-id="${product.id}">Add To Cart</button>`;

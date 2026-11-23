@@ -329,14 +329,19 @@
 
   .hero__content {
     max-width: none;
+    text-align: center;
   }
 
   .hero__title {
+    margin-inline: auto;
     font-size: $font-size-h3;
   }
 
+  .hero__text {
+    margin-inline: auto;
+  }
+
   .hero__image {
-    align-self: center;
     width: 70%;
     max-width: 360px;
   }

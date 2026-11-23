@@ -43,9 +43,9 @@
 
 @include media($breakpoint-tablet) {
   .features__list {
+    @include centered-columns;
+
     display: grid;
-    grid-template-columns: repeat(auto-fill, $column-width);
-    justify-content: center;
     justify-items: center;
     gap: $space-2xl;
   }

@@ -18,11 +18,7 @@ loginModal.addEventListener('click', (event) => {
 });
 
 toggleBtn.addEventListener('click', () => {
-  if (passwordInput.type === 'password') {
-    passwordInput.type = 'text';
-  } else {
-    passwordInput.type = 'password';
-  }
+  passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
 });
 
 loginForm.addEventListener('submit', (event) => {

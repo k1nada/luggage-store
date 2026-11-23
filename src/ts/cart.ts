@@ -52,20 +52,14 @@ function renderCart(messageText: string): void {
   const cart = getCart();
   let rows = '';
   let sum = 0;
-  let discount = 0;
-  let shipping = 0;
 
   cart.forEach((item, index) => {
     rows += createRow(item, index);
     sum += item.price * item.quantity;
   });
 
-  if (sum > DISCOUNT_FROM) {
-    discount = sum * DISCOUNT_RATE;
-  }
-  if (cart.length > 0) {
-    shipping = SHIPPING;
-  }
+  const discount = sum > DISCOUNT_FROM ? sum * DISCOUNT_RATE : 0;
+  const shipping = cart.length > 0 ? SHIPPING : 0;
 
   tableBody.innerHTML = rows;
   tableWrap.hidden = cart.length === 0;

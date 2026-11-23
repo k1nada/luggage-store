@@ -131,13 +131,8 @@ form.addEventListener('reset', () => {
 });
 
 hideBtn.addEventListener('click', () => {
-  filtersRow.classList.toggle('filters__row--hidden');
-
-  if (filtersRow.classList.contains('filters__row--hidden')) {
-    hideBtn.textContent = 'Show Filters';
-  } else {
-    hideBtn.textContent = 'Hide Filters';
-  }
+  const isHidden = filtersRow.classList.toggle('filters__row--hidden');
+  hideBtn.textContent = isHidden ? 'Show Filters' : 'Hide Filters';
 });
 
 pagination.addEventListener('click', (event) => {
@@ -145,6 +140,7 @@ pagination.addEventListener('click', (event) => {
   if (btn) {
     page = Number(btn.dataset.page);
     renderCatalog();
+    window.scrollTo(0, 0);
   }
 });
 
